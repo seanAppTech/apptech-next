@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>AppTech Payments Corp. | Home</title>
+        <meta name="description" content="Innovative payment technology and digital banking solutions." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
