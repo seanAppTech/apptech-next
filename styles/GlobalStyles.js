@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
 
   main {
     width: 100%;
-    padding: 60px 0 800px;
+    padding: 60px 0 0;
   }
 
   .innerContent {

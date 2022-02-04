@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import GetStarted from '../components/PageComponents/GetStarted';
-import HeroImageLg from '../components/UI/HeroImages/HeroImageLg';
+import HeroImageSm from '../components/UI/HeroImages/HeroImageSm';
 
 
 export default function Home() {
@@ -16,11 +16,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <HeroImageLg image="/images/Patents_Blue.jpg" title="Patents">
-          <div>
-            <h1>Hello AppTech!!!</h1>
-          </div>
-        </HeroImageLg>
+        <HeroImageSm image="/images/Patents_Blue.jpg" title="Patents" />
         <div className='innerContent'>
           <button className='btn'>Button</button>
           <button className='btn btnLarge'>Button Large</button>
@@ -31,7 +27,7 @@ export default function Home() {
           <a className='btn btnDark'>Link Dark</a>
           <a className='btn btnLarge btnDark'>Link Large Dark</a>
         </div>
-        <GetStarted />
+        <GetStarted>Ready to get started? Let's chat.</GetStarted>
       </main>
     </div>
   )

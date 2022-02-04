@@ -52,17 +52,14 @@ export default function Footer() {
 
 //Styles
 const SiteFooter = styled.footer`
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    
     width: 100%;
     margin: 0;
     background: ${props => props.theme.colors.dark};
     color: #fff;
     font-weight: 300;
     line-height: 25px;
-    margin-top: 100px;
+    
     padding: 0;
     z-index: 10;
 
