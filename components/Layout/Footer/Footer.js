@@ -52,8 +52,7 @@ export default function Footer() {
 
 //Styles
 const SiteFooter = styled.footer`
-
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -65,6 +64,7 @@ const SiteFooter = styled.footer`
     line-height: 25px;
     margin-top: 100px;
     padding: 0;
+    z-index: 10;
 
     a {
         color: #fff;

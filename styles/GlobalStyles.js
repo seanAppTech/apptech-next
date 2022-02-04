@@ -18,6 +18,13 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.50s linear;
   }
 
+  main {
+    width: 100%;
+    max-width: ${props => props.theme.breakpoint.laptop};
+    margin: auto;
+    padding: 60px 10px 800px;
+  }
+
   a {
     color: ${({ theme }) => theme.colors.primary};
     cursor: pointer;
@@ -65,5 +72,45 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+  }
+
+  .btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 1.5px;
+    width: 170px;
+    height: 60px;
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+    background: #fff;
+    color: ${({ theme }) => theme.colors.primary};
+    border-radius: 5px;
+    transition: ${({ theme }) => theme.animationTimings.fast};
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    color: #fff;
+    background: ${({ theme }) => theme.colors.primary};
+    border: 1px solid #fff;
+  }
+
+  .btn.btnLarge {
+    width: 230px;
+  }
+
+  .btnDark {
+    color: #fff;
+    background: ${({ theme }) => theme.colors.primary};
+    border: 1px solid #fff;
+  }
+
+  .btnDark:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    background: #fff;
+    border: 1px solid ${({ theme }) => theme.colors.primary};
   }
 `;
