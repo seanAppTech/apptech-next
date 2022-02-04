@@ -8,10 +8,15 @@ export default function Footer() {
   return (
       <SiteFooter>
           <div className="wrapper">
-            <div className="logo">
-                <Link href="/">AppTech Logo</Link>
-            </div>
-            <div id="footerGrid">
+          <Link href="/">
+                    <Image
+                        src="/images/apptech-logo-white.png"
+                        alt="AppTech Corp."
+                        width={200}
+                        height={50}
+                    />
+                </Link>
+            <div className="footerGrid">
                 <div className='contact'>
                     <p>5876 Owens Ave. Ste 100, Carlsbad, CA 92008</p>
                     <a>(760) 707-5959</a>
@@ -70,12 +75,12 @@ const SiteFooter = styled.footer`
     }
 
     .wrapper {
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 100px auto 50px;
         padding: 20px;
     }
 
-    .flexFooter {
+    .footerGrid {
         display: grid;
         width: 100%;
         grid-template-columns: 1fr 1fr 1fr;
@@ -84,20 +89,12 @@ const SiteFooter = styled.footer`
     }
 
     @media screen and (max-width: ${props => props.theme.breakpoint.laptop}) {
-        .flexFooter {
+        .footerGrid {
             display: block;
         }
         .wrapper {
             margin-bottom: 10px;
         }
-    }
-
-    .logo {
-        margin-top: 35px;
-    }
-    .logo a {
-        color: #fff;
-        font-size: 2rem;
     }
 
     .contact {
@@ -129,7 +126,6 @@ const SiteFooter = styled.footer`
         background: #000;
         margin: 0;
         padding: 20px;
-        font-size: 0.9rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -137,5 +133,7 @@ const SiteFooter = styled.footer`
     }
     .copyright p {
         max-width: 1100px;
+        font-size: 14px;
+        font-weight: 300;
     }
 `;
