@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import GetStarted from '../components/PageComponents/GetStarted';
+import HeroImageLg from '../components/UI/HeroImages/HeroImageLg';
 
 
 export default function Home() {
@@ -15,6 +16,11 @@ export default function Home() {
       </Head>
 
       <main>
+        <HeroImageLg image="/images/Patents_Blue.jpg" title="Patents">
+          <div>
+            <h1>Hello AppTech!!!</h1>
+          </div>
+        </HeroImageLg>
         <div className='innerContent'>
           <button className='btn'>Button</button>
           <button className='btn btnLarge'>Button Large</button>
