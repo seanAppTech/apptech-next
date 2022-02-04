@@ -20,9 +20,14 @@ export const GlobalStyles = createGlobalStyle`
 
   main {
     width: 100%;
-    max-width: ${props => props.theme.breakpoint.laptop};
+    padding: 60px 0 800px;
+  }
+
+  .innerContent {
+    width: 100%;
+    max-width: ${({ theme }) => theme.breakpoint.laptop};
     margin: auto;
-    padding: 60px 10px 800px;
+    padding: 10px;
   }
 
   a {
@@ -84,7 +89,7 @@ export const GlobalStyles = createGlobalStyle`
     letter-spacing: 1.5px;
     width: 170px;
     height: 60px;
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 0.5px solid ${({ theme }) => theme.colors.primary};
     background: #fff;
     color: ${({ theme }) => theme.colors.primary};
     border-radius: 5px;
@@ -95,7 +100,7 @@ export const GlobalStyles = createGlobalStyle`
   .btn:hover {
     color: #fff;
     background: ${({ theme }) => theme.colors.primary};
-    border: 1px solid #fff;
+    border: 0.5px solid #fff;
   }
 
   .btn.btnLarge {
@@ -105,12 +110,12 @@ export const GlobalStyles = createGlobalStyle`
   .btnDark {
     color: #fff;
     background: ${({ theme }) => theme.colors.primary};
-    border: 1px solid #fff;
+    border: 0.5px solid ${({ theme }) => theme.colors.primary};
   }
 
   .btnDark:hover {
     color: ${({ theme }) => theme.colors.primary};
     background: #fff;
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 0.5px solid ${({ theme }) => theme.colors.primary};
   }
 `;

@@ -7,7 +7,8 @@ const theme = {
       quaternary: '#F6F9FF',
       tertiary: '#F6F9FF',
       hover: '#b8b6e0',
-      midnight: '#282491'
+      midnight: '#282491',
+      darkMidnight: '#15213f'
     },
     breakpoint: {
       mobile: '375px',
