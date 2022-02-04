@@ -6,12 +6,13 @@ const theme = {
       grey: '#999999',
       quaternary: '#F6F9FF',
       tertiary: '#F6F9FF',
-      hover: '#b8b6e0'
+      hover: '#b8b6e0',
+      midnight: '#282491'
     },
     breakpoint: {
       mobile: '375px',
       tablet: '600px',
-      laptop: '1200px',
+      laptop: '1100px',
       desktop: '1600px',
     },
     animationTimings: {

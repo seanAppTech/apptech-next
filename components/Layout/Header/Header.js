@@ -25,13 +25,14 @@ export default function Header() {
                 </Link>
                 <button className="navBarToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" onClick={navButtonClickHandler}>
                     <div className="navToggleButton">
-                        <span className={offCanvas ? "bar1Active" : "bar1"}></span>
-                        <span className={offCanvas ? "bar2Active" : "bar2"}></span>
-                        <span className={offCanvas ? "bar3Active" : "bar3"}></span>
+                        <span className={offCanvas ? "bar1 active" : "bar1"}></span>
+                        <span className={offCanvas ? "bar2 active" : "bar2"}></span>
+                        <span className={offCanvas ? "bar3 active" : "bar3"}></span>
                     </div>
                 </button>
                 
-                <div className={offCanvas ? "offCanvasActive" : "offCanvasInactive"}>
+                <div className={offCanvas ? "offCanvas active" : "offCanvas"}>
+                    <label className='menu'>Menu</label>
                     <Navigation />
                 </div>
             </nav>
@@ -60,8 +61,12 @@ const SiteHeader = styled.header`
     .navBarToggle {
         display: none;
     }
+
+    label.menu {
+        display: none;
+    }
     
-    @media screen and (max-width: 805px) {
+    @media screen and (max-width: ${props => props.theme.breakpoint.laptop}) {
         .navBarToggle {
             display: block;
             background: none;
@@ -86,45 +91,42 @@ const SiteHeader = styled.header`
             border-radius: 5px;
           }
 
-        .bar1Active {
+        .bar1.active {
             -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
             transform: rotate(-45deg) translate(-9px, 6px) ;
         }
       
-        .bar2Active {
+        .bar2.active {
             opacity: 0;
         }
       
-        .bar3Active {
+        .bar3.active {
             -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
             transform: rotate(45deg) translate(-8px, -8px) ;
         }
     
-        .offCanvasInactive {
+        .offCanvas {
             position: fixed;
-            left: -250px;
+            left: -320px;
             top: 0;
             bottom: 0;
-            width: 250px;
+            width: 320px;
             height: 100vh;
-            background: #2b28a1;
+            background: ${props => props.theme.colors.primary};
             color: white;
             transition: all 0.3s ease-in-out;
-            padding-top: 70px;
+            z-index: 50;
         }
     
-        .offCanvasActive {
-            position: fixed;
+        .offCanvas.active {
             left: 0;
-            top: 0;
-            bottom: 0;
-            width: 250px;
-            height: 100vh;
-            background: #2b28a1;
-            color: white;
-            transition: all 0.3s ease-in-out;
-            padding-top: 70px;
-            z-index: 50;
+        }
+
+        label.menu {
+            display: block;
+            height: 60px;
+            width: 320px;
+            padding: 20px 12px;
         }
     }
     

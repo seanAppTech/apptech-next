@@ -61,7 +61,7 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.25;
   }
 
-  p, a {
+  p, a, label, span {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;

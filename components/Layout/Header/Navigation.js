@@ -30,7 +30,7 @@ export default function Navigation() {
                 <button className="dropdownToggle" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={productsClickHandler}>
                     Products & Services <i className={productsDrop ? "arrow up" : "arrow down"}></i>
                 </button>
-                <div className={productsDrop ? "dropdownMenuActive" : "dropdownMenu"} aria-labelledby="productsDropdown">
+                <div className={productsDrop ? "dropdownMenu active" : "dropdownMenu"} aria-labelledby="productsDropdown">
                     <Link  
                         href="/products-and-services/omni-channel-payments"
                         className="dropLinks"
@@ -46,7 +46,7 @@ export default function Navigation() {
                 <button className="dropdownToggle" id="companyDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={companyClickHandler}>
                     Company <i className={companyDrop ? "arrow up" : "arrow down"}></i>
                 </button>
-                <div className={companyDrop ? "dropdownMenuActive" : "dropdownMenu"} aria-labelledby="companyDropdown">
+                <div className={companyDrop ? "dropdownMenu active" : "dropdownMenu"} aria-labelledby="companyDropdown">
                     <Link  
                         href="/company/about"
                         className="dropLinks"
@@ -98,15 +98,15 @@ const Div = styled.div`
             margin: 15px 20px;
         }
 
-        @media screen and (max-width: 805px) {
+        @media screen and (max-width: ${props => props.theme.breakpoint.laptop}) {
             flex-direction: column;
             width: 100%;
 
             li {
-                width: 250px;
-                border-top: 1px solid #ccc;
+                width: 320px;
+                border-top: 1px solid ${props => props.theme.colors.midnight};
                 margin: 0;
-                padding: 10px;
+                padding: 12px;
                 box-sizing: border-box;
             }
         }
@@ -156,16 +156,10 @@ const Div = styled.div`
         transition: all 0.2s ease;
     }
 
-    .dropdownMenuActive {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 250px;
+    .dropdownMenu.active {
         height: auto;
-        max-height: 200px;
-        padding: 10px;
+        padding: 10px 0 5px 0;
         transition: all ${props => props.theme.animationTimings.medium};
-
         a {
             margin: 10px 0;
         }
@@ -181,14 +175,15 @@ const Div = styled.div`
         transition: all ${props => props.theme.animationTimings.medium};
     }
 
-    @media screen and (max-width: 805px) {
-        .dropdownMenu, .dropdownMenuActive {
+    @media screen and (max-width: ${props => props.theme.breakpoint.laptop}) {
+        .dropdownMenu,
+        .dropdownMenu.active {
             position: static;
         }
     }
 
-    @media screen and (min-width: 806px) {
-        .dropdownMenuActive {
+    @media screen and (min-width: ${props => props.theme.breakpoint.laptop}) {
+        .dropdownMenu.active {
             background: #fff;
             padding: 20px;
             border-radius: 10px 10px;
@@ -229,13 +224,13 @@ const Div = styled.div`
         border-radius: 5px 5px;
     }
     
-    @media screen and (max-width: 804px) {
+    @media screen and (max-width: ${props => props.theme.breakpoint.laptop}) {
         .contactButton a {
             display: block;
         }
     }
     
-    @media screen and (min-width: 805px) {
+    @media screen and (min-width: ${props => props.theme.breakpoint.laptop}) {
         a.dropLinks {
             color: #333;
         }
