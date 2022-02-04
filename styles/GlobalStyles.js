@@ -2,8 +2,15 @@ import { createGlobalStyle} from "styled-components";
 import { theme } from './Theme';
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+  }
   body {
     background: #fff;
     color: ${({ theme }) => theme.colors.dark};
@@ -15,6 +22,11 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.primary};
     cursor: pointer;
     text-decoration: none;
+    transition: color ${({ theme }) => theme.animationTimings.fast}
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.colors.hover};
   }
 
   h1, h2, h3 {

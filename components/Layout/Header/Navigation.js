@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
+import styled from 'styled-components';
 
 
 export default function Navigation() {
@@ -20,7 +21,7 @@ export default function Navigation() {
     }
     
   return (
-      <div>
+      <Div>
           <ul>
             <li>
                 <Link href="/">Home</Link>
@@ -73,6 +74,178 @@ export default function Navigation() {
                 </div>
             </li> 
         </ul>
-      </div>
+      </Div>
   );
 }
+
+const Div = styled.div`
+
+    a {
+        color: #fff;
+    }
+
+    a:hover {
+        color: ${props => props.theme.colors.grey};
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+
+        li {
+            margin: 15px 20px;
+        }
+
+        @media screen and (max-width: 805px) {
+            flex-direction: column;
+            width: 100%;
+
+            li {
+                width: 250px;
+                border-top: 1px solid #ccc;
+                margin: 0;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .dropdownToggle {
+        background: none;
+        color: white;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        padding-left: 0;
+    }
+    
+    .dropdownToggle:hover, .dropdownToggle:active {
+        color: #ccc;
+        cursor: pointer;
+    }
+
+    .arrow {
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+    
+    .dropdownToggle:hover .arrow, .dropdownToggle:active .arrow {
+        border: solid #ccc;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+    
+    .up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        margin: 0 0 0 5px;
+        transition: all 0.2s ease;
+    }
+      
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin: 0 0 3px 5px;
+        transition: all 0.2s ease;
+    }
+
+    .dropdownMenuActive {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: auto;
+        max-height: 200px;
+        padding: 10px;
+        transition: all ${props => props.theme.animationTimings.medium};
+
+        a {
+            margin: 10px 0;
+        }
+    }
+
+    .dropdownMenu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 0;
+        overflow: hidden;
+        transition: all ${props => props.theme.animationTimings.medium};
+    }
+
+    @media screen and (max-width: 805px) {
+        .dropdownMenu, .dropdownMenuActive {
+            position: static;
+        }
+    }
+
+    @media screen and (min-width: 806px) {
+        .dropdownMenuActive {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px 10px;
+            height: auto;
+            margin-top: 25px;
+            box-shadow: -4px 4px 10px rgba(0, 0, 255, .2);
+
+            a {
+                color: ${props => props.theme.colors.dark}
+            }
+
+            a:hover {
+                color: ${props => props.theme.colors.hover};
+            }
+        }
+    }
+
+    .contactButton {
+        padding-top: 5px;
+    }
+    
+    .contactButton a {
+        background: #fff;
+        color: #2b28a1;
+        padding: 10px 20px;
+        border-radius: 5px 5px;
+        border: 1px solid #2b28a1;
+        transition: all 0.2s ease-in-out;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .contactButton a:hover {
+        background: #2b28a1;
+        color: #fff;
+        border: solid 1px #fff;
+        padding: 10px 20px;
+        border-radius: 5px 5px;
+    }
+    
+    @media screen and (max-width: 804px) {
+        .contactButton a {
+            display: block;
+        }
+    }
+    
+    @media screen and (min-width: 805px) {
+        a.dropLinks {
+            color: #333;
+        }
+        a.dropLinks:hover {
+            color: #aaa;
+        }
+    
+        .contactButton {
+            padding-top: 0;
+            margin: 0;
+        }
+    }
+`;
