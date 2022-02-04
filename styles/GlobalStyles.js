@@ -89,7 +89,7 @@ export const GlobalStyles = createGlobalStyle`
     letter-spacing: 1.5px;
     width: 170px;
     height: 60px;
-    border: 0.5px solid ${({ theme }) => theme.colors.primary};
+    border: 0.2px solid ${({ theme }) => theme.colors.primary};
     background: #fff;
     color: ${({ theme }) => theme.colors.primary};
     border-radius: 5px;
@@ -100,7 +100,7 @@ export const GlobalStyles = createGlobalStyle`
   .btn:hover {
     color: #fff;
     background: ${({ theme }) => theme.colors.primary};
-    border: 0.5px solid #fff;
+    border: 0.2px solid #fff;
   }
 
   .btn.btnLarge {
@@ -110,12 +110,12 @@ export const GlobalStyles = createGlobalStyle`
   .btnDark {
     color: #fff;
     background: ${({ theme }) => theme.colors.primary};
-    border: 0.5px solid ${({ theme }) => theme.colors.primary};
+    border: 0.2px solid ${({ theme }) => theme.colors.primary};
   }
 
   .btnDark:hover {
     color: ${({ theme }) => theme.colors.primary};
     background: #fff;
-    border: 0.5px solid ${({ theme }) => theme.colors.primary};
+    border: 0.2px solid ${({ theme }) => theme.colors.primary};
   }
 `;
