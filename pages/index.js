@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import GetStarted from '../components/PageComponents/GetStarted';
+import TeamMember from '../components/PageComponents/TeamMember';
 import HeroImageSm from '../components/UI/HeroImages/HeroImageSm';
 
 
@@ -16,7 +17,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <HeroImageSm image="/images/Patents_Blue.jpg" title="Patents" />
+        <HeroImageSm 
+          image="/images/Patents_Blue.jpg" 
+          title="Patents" 
+        />
         <div className='innerContent'>
           <button className='btn'>Button</button>
           <button className='btn btnLarge'>Button Large</button>
@@ -26,6 +30,13 @@ export default function Home() {
           <button className='btn btnLarge btnDark'>Button Large Dark</button>
           <a className='btn btnDark'>Link Dark</a>
           <a className='btn btnLarge btnDark'>Link Large Dark</a>
+
+          <TeamMember 
+            image="/images/luke-dangelo.png"
+            name="Luke D'Angelo"
+            title="Chief Executive Officer & Executive Director"
+            linkedIn="https://www.linkedin.com/in/lukedangelo1/"
+          />
         </div>
         <GetStarted>Ready to get started? Let's chat.</GetStarted>
       </main>
