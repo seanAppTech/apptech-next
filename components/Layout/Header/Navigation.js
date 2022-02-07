@@ -30,7 +30,7 @@ export default function Navigation() {
                 <button className="dropdownToggle" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={productsClickHandler}>
                     Products & Services <i className={productsDrop ? "arrow up" : "arrow down"}></i>
                 </button>
-                <div className={productsDrop ? "dropdownMenu active" : "dropdownMenu"} aria-labelledby="productsDropdown">
+                <div className={productsDrop ? "dropdownMenu productsDrop active" : "dropdownMenu productsDrop"} aria-labelledby="productsDropdown">
                     <Link  
                         href="/products-and-services/omni-channel-payments"
                         className="dropLinks"
@@ -46,7 +46,7 @@ export default function Navigation() {
                 <button className="dropdownToggle" id="companyDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={companyClickHandler}>
                     Company <i className={companyDrop ? "arrow up" : "arrow down"}></i>
                 </button>
-                <div className={companyDrop ? "dropdownMenu active" : "dropdownMenu"} aria-labelledby="companyDropdown">
+                <div className={companyDrop ? "dropdownMenu companyDrop active" : "dropdownMenu companyDrop"} aria-labelledby="companyDropdown">
                     <Link  
                         href="/company/about"
                         className="dropLinks"
@@ -156,48 +156,57 @@ const Div = styled.div`
         transition: all 0.2s ease;
     }
 
-    .dropdownMenu.active {
-        height: auto;
-        padding: 10px 0 5px 0;
-        transition: all ${props => props.theme.animationTimings.medium};
-        a {
-            margin: 10px 0;
-        }
-    }
-
-    .dropdownMenu {
+    .productsDrop, .companyDrop {
         position: absolute;
         display: flex;
         flex-direction: column;
         width: 250px;
         height: 0;
+        margin-top: 10px;
         overflow: hidden;
-        transition: all ${props => props.theme.animationTimings.medium};
+        transition: height ${props => props.theme.animationTimings.medium};
+
+        a {
+            margin: 10px;
+        }
+    }
+
+    .productsDrop.active {
+        height: 90px;
+    }
+
+    .companyDrop.active {
+        height: 175px;
     }
 
     @media screen and (max-width: ${props => props.theme.breakpoint.laptop}) {
-        .dropdownMenu,
-        .dropdownMenu.active {
+        .productsDrop, .companyDrop {
             position: static;
         }
     }
 
     @media screen and (min-width: ${props => props.theme.breakpoint.laptop}) {
-        .dropdownMenu.active {
+        .productsDrop, .companyDrop {
             background: #fff;
-            padding: 20px;
             border-radius: 10px 10px;
-            height: auto;
+            height: 0;
             margin-top: 25px;
             box-shadow: -4px 4px 10px rgba(0, 0, 255, .2);
 
             a {
-                color: ${props => props.theme.colors.dark}
+                color: ${props => props.theme.colors.dark};
             }
 
             a:hover {
                 color: ${props => props.theme.colors.hover};
             }
+        }
+        .productsDrop.active {
+            height: 90px;
+        }
+
+        .companyDrop.active {
+            height: 180px;
         }
     }
 
@@ -231,12 +240,7 @@ const Div = styled.div`
     }
     
     @media screen and (min-width: ${props => props.theme.breakpoint.laptop}) {
-        a.dropLinks {
-            color: #333;
-        }
-        a.dropLinks:hover {
-            color: #aaa;
-        }
+        
     
         .contactButton {
             padding-top: 0;

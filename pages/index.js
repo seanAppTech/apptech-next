@@ -1,10 +1,12 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
 import GetStarted from '../components/PageComponents/GetStarted';
 import TeamMember from '../components/PageComponents/TeamMember';
 import HeroImageSm from '../components/UI/HeroImages/HeroImageSm';
+import Grid from '../components/UI/Grid/Grid';
 
 
 export default function Home() {
@@ -17,28 +19,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <HeroImageSm 
-          image="/images/Patents_Blue.jpg" 
-          title="Patents" 
-        />
-        <div className='innerContent'>
-          <button className='btn'>Button</button>
-          <button className='btn btnLarge'>Button Large</button>
-          <a className='btn'>Link</a>
-          <a className='btn btnLarge'>Link Large</a>
-          <button className='btn btnDark'>Button Dark</button>
-          <button className='btn btnLarge btnDark'>Button Large Dark</button>
-          <a className='btn btnDark'>Link Dark</a>
-          <a className='btn btnLarge btnDark'>Link Large Dark</a>
-
-          <TeamMember 
-            image="/images/luke-dangelo.png"
-            name="Luke D'Angelo"
-            title="Chief Executive Officer & Executive Director"
-            linkedIn="https://www.linkedin.com/in/lukedangelo1/"
-          />
-        </div>
-        <GetStarted>Ready to get started? Let's chat.</GetStarted>
+        <Link href="/demo">Demo</Link>
       </main>
     </div>
   )

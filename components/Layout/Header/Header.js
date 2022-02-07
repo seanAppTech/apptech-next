@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from './Navigation';
 
+
 export default function Header() {
   const [offCanvas, setOffCanvas] = useState(false);
 
@@ -56,6 +57,10 @@ const SiteHeader = styled.header`
         align-items: center;
         justify-content: space-between;
         padding: 0 10px;
+        
+        span img {
+            cursor: pointer;
+        }
     }
 
     .navBarToggle {

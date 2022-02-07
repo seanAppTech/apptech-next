@@ -1,0 +1,111 @@
+{
+    "data": {
+        "overview": {
+            "title": "Company Overview",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/company_overview_hero_image_edit-scaled.jpg",
+            "header": "Company Overview",
+            "quote": {
+                "text": "\"Built upon 200 years of combined financial and technology expertise, the AppTech fintech platform will set the gold standard for the delivery of continuous digital financial innovation and commerce experiences. Our success, and that of our clients, will be attributed to an ongoing commitment to solving challenges through technology enablement.\"",
+                "name": "Luke D'Angelo",
+                "position": "CEO"
+            }
+        },
+        "about": {
+            "title": "About Us",
+            "summary": "AppTech Payments Corp. is a publicly listed FinTech company utilizing innovative payment processing and digital banking technologies to complement our core merchant services capabilities. Our patented and proprietary software will provide progressive and adaptable products that are available through a suite of synergistic offerings directly to merchants, banking institutions and business enterprises.",
+            "developing": "AppTech is developing an embedded, highly secure digital payments and banking platform that powers commerce experiences for clients and their customers. Based upon industry standards for payment and banking protocols, we will offer standalone products and fully integrated solutions that deliver innovative, unparalleled payments, banking, and financial services experiences. Our processing technologies can be taken off-the-shelf or tapped into via our RESTful API to build fully branded and customizable experiences while supporting tokenized, multi-channel, and multi-method transactions."
+        },
+        "team": {
+            "luke": {
+                "name": "Luke D'Angelo",
+                "title": "Chief Executive Officer & Executive Director",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/LukeDAngelo-1.png",
+                "linkedIn": "https://www.linkedin.com/in/lukedangelo1/"
+            },
+            "gary": {
+                "name": "Gary Wachs",
+                "title": "Chief Financial Officer",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/GaryWachs.png",
+                "linkedIn": "https://www.linkedin.com/company/apptech-corp/"
+            },
+            "virgil": {
+                "name": "Virgilio Llapitan",
+                "title": "President",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/VirgilLlapitan-1.png",
+                "linkedIn": "https://www.linkedin.com/in/virgil-llapitan/"
+            },
+            "ben": {
+                "name": "Ben Jenkins",
+                "title": "Chief Technology Officer",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/BenJenkins-1.png",
+                "linkedIn": "https://www.linkedin.com/in/benjaminjenkins/"
+            },
+            "chad": {
+                "name": "Chad Nelley",
+                "title": "Chief Operations Officer",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ChadNelley.png",
+                "linkedIn": "https://www.linkedin.com/in/chadnelley/"
+            },
+            "bryan": {
+                "name": "Bryan Guy",
+                "title": "SVP of Product & Experiences",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/BryanGuy-1.png",
+                "linkedIn": "https://www.linkedin.com/in/bryanguyjd/"
+            },
+            "aram": {
+                "name": "Aram A. Aghapour",
+                "title": "SVP of Research, Development and InfraOps",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Aram-1.png",
+                "linkedIn": "https://www.linkedin.com/in/aramaghapour/"
+            },
+            "nick": {
+                "name": "Nick Nolasco",
+                "title": "Chief Architect",
+                "image": "https://apptechcorp.com/wp-content/uploads/2022/01/Nick_800px.png",
+                "linkedIn": "https://www.linkedin.com/in/nick-nolasco-5617209/"
+            },
+            "scott": {
+                "name": "Scott Carnley",
+                "title": "Director of Engineering",
+                "image": "https://apptechcorp.com/wp-content/uploads/2022/01/Scott_800px.png",
+                "linkedIn": "https://www.linkedin.com/in/scott-carnley-11b8274/"
+            },
+            "christine": {
+                "name": "Christine Carroll",
+                "title": "Corporate Operations Manager",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Christine-1.png",
+                "linkedIn": "https://www.linkedin.com/in/christine-carroll-3b2436159/"
+            },
+            "ron": {
+                "name": "Ron Hill",
+                "title": "Director of Merchant Services",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/RonHill-1.png",
+                "linkedIn": "https://www.linkedin.com/in/ronhill1/"
+            },
+            "tyler": {
+                "name": "Tyler McCollum",
+                "title": "Director of Information Technology",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/TylerMcCollum.png",
+                "linkedIn": "https://www.linkedin.com/in/tyler-mccollum-8bab4b119/"
+            },
+            "sean": {
+                "name": "Sean Standen",
+                "title": "Web Development & Content Manager",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/SeanStanden.png",
+                "linkedIn": "https://www.linkedin.com/in/sean-standen/"
+            },
+            "emily": {
+                "name": "Emily Finch",
+                "title": "Graphic Designer & Social Media Specialist",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/EmilyFinch-1.png",
+                "linkedIn": "https://www.linkedin.com/in/emily-finch-ef/"
+            },
+            "anthony": {
+                "name": "Anthony Shall",
+                "title": "Associate Product & Project Manager",
+                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/AnthonyShall-1.png",
+                "linkedIn": "https://www.linkedin.com/in/anthony-shall-a77a691a/"
+            }
+        }
+    }
+}
