@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Grid({ children }) {
+export default function TeamGrid({ children }) {
   return (
     <Div>
         {children}

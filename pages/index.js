@@ -3,11 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import GetStarted from '../components/PageComponents/GetStarted';
-import TeamMember from '../components/PageComponents/TeamMember';
-import HeroImageSm from '../components/UI/HeroImages/HeroImageSm';
-import Grid from '../components/UI/Grid/Grid';
-
 
 export default function Home() {
   return (

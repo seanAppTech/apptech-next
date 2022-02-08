@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import GetStarted from '../components/PageComponents/GetStarted';
 import TeamMember from '../components/PageComponents/TeamMember';
 import HeroImageSm from '../components/UI/HeroImages/HeroImageSm';
-import Grid from '../components/UI/Grid/Grid';
+import TeamGrid from '../components/UI/Grid/TeamGrid';
 
 
 export default function Demo({ data }) {
@@ -21,8 +21,8 @@ export default function Demo({ data }) {
 
       <main>
         <HeroImageSm 
-          image="/images/Patents_Blue.jpg" 
-          title="Patents" 
+          image="https://apptechcorp.com/wp-content/uploads/2021/12/company_overview_hero_image_edit-scaled.jpg" 
+          title="Conference Room" 
         />
         <div className='innerContent'>
           <button className='btn'>Button</button>
@@ -33,19 +33,19 @@ export default function Demo({ data }) {
           <button className='btn btnLarge btnDark'>Button Large Dark</button>
           <a className='btn btnDark'>Link Dark</a>
           <a className='btn btnLarge btnDark'>Link Large Dark</a>
-          <Grid>
+          <TeamGrid>
             {
               team.map(person => (
                 <TeamMember 
-                image={person.image}
-                name={person.name}
-                title={person.title}
-                linkedIn={person.linkedIn}
-                key={person.id}
-            />
+                  image={person.image}
+                  name={person.name}
+                  title={person.title}
+                  linkedIn={person.linkedIn}
+                  key={person.id}
+              />
               ))
             }
-          </Grid>
+          </TeamGrid>
         </div>
         <GetStarted>Ready to get started? Let's chat.</GetStarted>
       </main>
