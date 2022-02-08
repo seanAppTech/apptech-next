@@ -10,6 +10,7 @@ export default function HeroImageSm({ image, title }) {
             alt={title}
             layout="fill"
             objectFit="cover"
+            priority
           />
       </Div>
   );

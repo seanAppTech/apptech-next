@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from './Navigation';
-
+import Modal from '../../UI/Modal/Modal';
 
 export default function Header() {
   const [offCanvas, setOffCanvas] = useState(false);
@@ -14,30 +14,34 @@ export default function Header() {
   }
 
   return (
-      <SiteHeader>
-          <nav>
-                <Link href="/">
-                    <Image
-                        src="/images/apptech-logo-white.png"
-                        alt="AppTech Corp."
-                        width={200}
-                        height={50}
-                    />
-                </Link>
-                <button className="navBarToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" onClick={navButtonClickHandler}>
-                    <div className="navToggleButton">
-                        <span className={offCanvas ? "bar1 active" : "bar1"}></span>
-                        <span className={offCanvas ? "bar2 active" : "bar2"}></span>
-                        <span className={offCanvas ? "bar3 active" : "bar3"}></span>
+      <>
+        <SiteHeader>
+            <nav>
+                    <Link href="/">
+                        <a>
+                            <Image
+                                src="/images/apptech-logo-white.png"
+                                alt="AppTech Corp."
+                                width={200}
+                                height={50}
+                            />
+                        </a>
+                    </Link>
+                    <button className="navBarToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" onClick={navButtonClickHandler}>
+                        <div className="navToggleButton">
+                            <span className={offCanvas ? "bar1 active" : "bar1"}></span>
+                            <span className={offCanvas ? "bar2 active" : "bar2"}></span>
+                            <span className={offCanvas ? "bar3 active" : "bar3"}></span>
+                        </div>
+                    </button>
+                    <div className={offCanvas ? "offCanvas active" : "offCanvas"}>
+                        <label className='menu'>Menu</label>
+                        <Navigation />
                     </div>
-                </button>
-                
-                <div className={offCanvas ? "offCanvas active" : "offCanvas"}>
-                    <label className='menu'>Menu</label>
-                    <Navigation />
-                </div>
-            </nav>
-      </SiteHeader>
+                </nav>
+        </SiteHeader>
+        {offCanvas ? <Modal onClick={navButtonClickHandler} /> : null}
+      </>
   );
 }
 

@@ -9,12 +9,7 @@ import Grid from '../components/UI/Grid/Grid';
 
 
 export default function Demo({ data }) {
-    const {overview, about, team} = data.data;
-    console.log(team);
-
-    for (const person in team) {
-        console.log(person.title);
-    }
+  const { team } = data;
 
   return (
     <div>
@@ -39,14 +34,17 @@ export default function Demo({ data }) {
           <a className='btn btnDark'>Link Dark</a>
           <a className='btn btnLarge btnDark'>Link Large Dark</a>
           <Grid>
-            <TeamMember 
-                image={team.luke.image}
-                name={team.luke.name}
-                title={team.luke.title}
-                linkedIn={team.luke.linkedIn}
-                key={team.luke.name}
+            {
+              team.map(person => (
+                <TeamMember 
+                image={person.image}
+                name={person.name}
+                title={person.title}
+                linkedIn={person.linkedIn}
+                key={person.id}
             />
-            
+              ))
+            }
           </Grid>
         </div>
         <GetStarted>Ready to get started? Let's chat.</GetStarted>

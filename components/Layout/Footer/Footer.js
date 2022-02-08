@@ -8,14 +8,16 @@ export default function Footer() {
   return (
       <SiteFooter>
           <div className="wrapper">
-          <Link href="/">
+            <Link href="/">
+                <a>
                     <Image
                         src="/images/apptech-logo-white.png"
                         alt="AppTech Corp."
                         width={200}
                         height={50}
                     />
-                </Link>
+                </a>
+            </Link>
             <div className="footerGrid">
                 <div className='contact'>
                     <p>5876 Owens Ave. Ste 100, Carlsbad, CA 92008</p>

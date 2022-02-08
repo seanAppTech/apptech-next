@@ -29,11 +29,12 @@ export default function TeamMember({ image, name, title, linkedIn }) {
 
 //styles
 const Div = styled.div`
-    max-width: 240px;
-    padding: 0 20px 40px;
+    width: 240px;
+    height: 350px;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
 

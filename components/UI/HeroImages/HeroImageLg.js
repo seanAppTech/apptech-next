@@ -10,6 +10,7 @@ export default function HeroImageLg({ image, title, children }) {
             alt={title}
             layout="fill"
             objectFit="cover"
+            priority
           />
           <div className='content'>
               {children}
