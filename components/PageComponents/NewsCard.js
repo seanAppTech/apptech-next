@@ -63,6 +63,9 @@ const Div = styled.div`
         height: 35px;
         position: absolute;
         bottom: 0;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
 
         date {
             font-size: 12px;
