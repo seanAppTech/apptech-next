@@ -1,11 +1,23 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
-// import {getPosts} from "../../lib/api";
+import PostsGrid from '../../components/UI/Grid/PostsGrid';
+import NewsCard from '../../components/PageComponents/NewsCard';
+
+import { getAllNewsPosts } from "../../lib/api";
 
 
-export default function News() {
+export default function News({ posts, paths }) {
+
+  const router = useRouter();
+  console.log(posts);
+
+  if (router.isFallback) {
+    return <div>loading...</div>
+ }
+
   return (
     <div>
       <Head>
@@ -15,35 +27,47 @@ export default function News() {
       </Head>
 
       <main>
-        
+        <PostsGrid>
+          {
+            posts.map(post => {
+              <NewsCard  
+                img={post.node.featuredImage}
+                title={posts.node.title} 
+                excerpt={posts.node.excerpt} 
+                date={posts.node.date} 
+                link={posts.node.slug}
+              />
+            })
+          }
+        </PostsGrid>
       </main>
     </div>
   )
 }
 
-// export async function getStaticProps() {
-//     const res = await getPosts();
-//     const posts = await res.json();
+export async function getStaticProps() {
+    const res = await getAllNewsPosts();
+    const posts = await res.edges;
   
-//     return {
-//       props: {
-//         posts,
-//       },
-//       revalidate: 10, // In seconds
-//     }
-//   }
+    return {
+      props: {
+        posts
+      },
+      revalidate: 10, // In seconds
+    }
+  }
 
-//   export async function getStaticPaths() {
-//     const res = await getPosts();
-//     const posts = await res.json();
+  export async function getStaticPaths() {
+    const res = await getAllNewsPosts();
+    const posts = await res.edges;
   
-//     // Get the paths we want to pre-render based on posts
-//     const paths = posts.map((post) => ({
-//       params: { slug: post.slug },
-//     }))
+    // Get the paths we want to pre-render based on posts
+    const paths = posts.map((post) => ({
+      params: { slug: post.slug },
+    }))
   
-//     // We'll pre-render only these paths at build time.
-//     // { fallback: blocking } will server-render pages
-//     // on-demand if the path doesn't exist.
-//     return { paths, fallback: 'blocking' }
-//   }
+    // We'll pre-render only these paths at build time.
+    // { fallback: blocking } will server-render pages
+    // on-demand if the path doesn't exist.
+    return { paths, fallback: 'blocking' }
+  }
