@@ -17,7 +17,9 @@ export default function News({ posts, paths }) {
 //   if (router.isFallback) {
 //     return <div>loading...</div>
 //  }
-
+  // posts.forEach(post => {
+  //   console.log(post.node.featuredImage[0])
+  // })
   return (
     <div>
       <Head>
@@ -26,13 +28,13 @@ export default function News({ posts, paths }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <Main>
         <h1>News</h1>
         <PostsGrid>
           {
             posts.map(post => (
               <NewsCard  
-                img={post.node.featuredImage}
+                // img={post.node.featuredImage}
                 title={post.node.title} 
                 excerpt={post.node.excerpt} 
                 date={post.node.date} 
@@ -41,7 +43,7 @@ export default function News({ posts, paths }) {
             ))
           }
         </PostsGrid>
-      </main>
+      </Main>
     </div>
   )
 }
@@ -72,3 +74,14 @@ export async function getStaticProps() {
   //   // on-demand if the path doesn't exist.
   //   return { paths, fallback: 'blocking' }
   // }
+
+  //styles 
+  const Main = styled.main`
+    max-width: ${props => props.theme.breakpoint.laptop};
+    margin: auto;
+
+    h1 {
+      font-weight: 500;
+      margin: 50px 0;
+    }
+  `;
