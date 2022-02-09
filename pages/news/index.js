@@ -12,11 +12,11 @@ import { getAllNewsPosts } from "../../lib/api";
 export default function News({ posts, paths }) {
 
   const router = useRouter();
-  console.log(posts);
+  
 
-  if (router.isFallback) {
-    return <div>loading...</div>
- }
+//   if (router.isFallback) {
+//     return <div>loading...</div>
+//  }
 
   return (
     <div>
@@ -27,17 +27,18 @@ export default function News({ posts, paths }) {
       </Head>
 
       <main>
+        <h1>News</h1>
         <PostsGrid>
           {
-            posts.map(post => {
+            posts.map(post => (
               <NewsCard  
                 img={post.node.featuredImage}
-                title={posts.node.title} 
-                excerpt={posts.node.excerpt} 
-                date={posts.node.date} 
-                link={posts.node.slug}
+                title={post.node.title} 
+                excerpt={post.node.excerpt} 
+                date={post.node.date} 
+                link={"/news/" + posts.slug}
               />
-            })
+            ))
           }
         </PostsGrid>
       </main>
@@ -57,17 +58,17 @@ export async function getStaticProps() {
     }
   }
 
-  export async function getStaticPaths() {
-    const res = await getAllNewsPosts();
-    const posts = await res.edges;
+  // export async function getStaticPaths() {
+  //   const res = await getAllNewsPosts();
+  //   const posts = await res.edges;
   
-    // Get the paths we want to pre-render based on posts
-    const paths = posts.map((post) => ({
-      params: { slug: post.slug },
-    }))
+  //   // Get the paths we want to pre-render based on posts
+  //   const paths = posts.map((post) => ({
+  //     params: { slug: post.slug },
+  //   }))
   
-    // We'll pre-render only these paths at build time.
-    // { fallback: blocking } will server-render pages
-    // on-demand if the path doesn't exist.
-    return { paths, fallback: 'blocking' }
-  }
+  //   // We'll pre-render only these paths at build time.
+  //   // { fallback: blocking } will server-render pages
+  //   // on-demand if the path doesn't exist.
+  //   return { paths, fallback: 'blocking' }
+  // }

@@ -4,18 +4,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function NewsCard({ img, title, excerpt, date, link }) {
+    let newsImage;
+    if(img) {
+        newsImage = <div className='imgWrapper'>
+                        <Image 
+                            src={img}
+                            alt={title}
+                            layout="contain"
+                        />
+                    </div>
+    } else {
+        newsImage = null;
+    }
     return (
         <Div>
-            <div className='imgWrapper'>
-                <Image 
-                    src={img}
-                    alt={title}
-                    layout="contain"
-                />
-            </div>
+            {newsImage}
             <div className='postInfo'>
                 <h3>{title}</h3>
-                <p>{excerpt}</p>
+                <div dangerouslySetInnerHTML={{__html: excerpt}} />
                 <Link href={link}><a>Read More</a></Link>
             </div>
             <div className='date'>

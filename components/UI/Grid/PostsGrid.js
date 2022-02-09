@@ -12,7 +12,7 @@ export default function PostsGrid({ children }) {
 const Div = styled.div`
     display: grid;
     gap: 1rem;
-
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-auto-rows: 240px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: ${props => props.theme.breakpoint.laptop};
+    margin: auto;
 `;
