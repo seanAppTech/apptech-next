@@ -31,7 +31,7 @@ export default function Header() {
         <SiteHeader>
             <nav>
                     <Link href="/">
-                        <a>
+                        <a className='logoWrap'>
                             <Image
                                 src="/images/apptech-logo-white.png"
                                 alt="AppTech Corp."
@@ -74,6 +74,10 @@ const SiteHeader = styled.header`
         align-items: center;
         justify-content: space-between;
         padding: 0 10px;
+
+        .logoWrap {
+            padding-top: 5px;
+        }
         
         span img {
             cursor: pointer;
@@ -96,6 +100,7 @@ const SiteHeader = styled.header`
             width: 35px;
             height: 35px;
             cursor: pointer;
+            margin-top: -5px;
         }
     
         .navToggleButton {
