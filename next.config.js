@@ -4,6 +4,6 @@ module.exports = {
     WordPressURL: "http://apptechheadless.local/graphql",
   },
   images: {
-    domains: ['localhost', 'apptechcorp.com'],
+    domains: ['localhost', 'apptechheadless.local'],
   },
 }

@@ -9,22 +9,38 @@ import NewsCard from '../../components/PageComponents/NewsCard';
 import { getAllNewsPosts } from "../../lib/api";
 
 
-export default function News({ posts, paths }) {
+export default function News({ posts }) {
 
   let displayPosts;
 
   if (!posts) {
     displayPosts = <div className='error'>There was an error loading posts.</div>;
  } else {
-    displayPosts = posts.map(post => (
-      <NewsCard  
-        // img={post.node.featuredImage}
-        title={post.node.title} 
-        excerpt={post.node.excerpt} 
-        date={post.node.date} 
-        link={"/news/" + posts.slug}
-      />
-    ))
+    displayPosts = posts.map(post => {
+      if(post.node.featuredImage) {
+        return (
+          <NewsCard  
+            img={post.node.featuredImage.node.mediaItemUrl}
+            title={post.node.title} 
+            excerpt={post.node.excerpt} 
+            date={post.node.date} 
+            link={"/news/" + posts.slug}
+            key={post.node.id}
+          />
+        );
+      } else {
+        return (
+          <NewsCard  
+            title={post.node.title} 
+            excerpt={post.node.excerpt} 
+            date={post.node.date} 
+            link={"/news/" + posts.slug}
+            key={post.node.id}
+          />
+        );
+      }
+    }
+    )
   }
 
   return (
