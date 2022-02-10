@@ -70,7 +70,9 @@ const SiteHeader = styled.header`
     nav {
         display: flex;
         width: 100%;
+        max-width: ${props => props.theme.breakpoint.laptop};
         height: 100%;
+        margin: 0 auto;
         align-items: center;
         justify-content: space-between;
         padding: 0 10px;

@@ -80,7 +80,7 @@ export default function Navigation() {
             <li>  
                 <Link href="/investor-relations">Investor Relations</Link>
             </li>
-            <li>
+            <li className='contact'>
                 <div className='contactButton'>
                     <Link href="/contact">Contact</Link>
                 </div>
@@ -252,7 +252,9 @@ const Div = styled.div`
     }
     
     @media screen and (min-width: ${props => props.theme.breakpoint.laptop}) {
-        
+        .contact {
+            margin: 15px 0 15px 20px;
+        }
     
         .contactButton {
             padding-top: 0;
