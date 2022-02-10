@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
+import dateConversion from '../../lib/date';
 
 export default function NewsCard({ img, title, excerpt, date, link }) {
     let newsImage;
+    
+    //date formatting
+    let postDate = new Date(date);
+
     if(img) {
         newsImage = <div className='imgWrapper'>
                         <Image 
@@ -25,7 +30,7 @@ export default function NewsCard({ img, title, excerpt, date, link }) {
                 <Link href={link}><a>Read More</a></Link>
             </div>
             <div className='date'>
-                <date>{date}</date>
+                <date>{dateConversion(postDate)}</date>
             </div>
         </Div>
     );

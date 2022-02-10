@@ -11,8 +11,9 @@ export default function PostsGrid({ children }) {
 
 const Div = styled.div`
     display: grid;
-    gap: 1rem;
+    gap: 0.8rem;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     max-width: ${props => props.theme.breakpoint.laptop};
     margin: auto;
+    padding: 10px;
 `;
