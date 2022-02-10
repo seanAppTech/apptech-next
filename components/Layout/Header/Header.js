@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,11 +8,23 @@ import Modal from '../../UI/Modal/Modal';
 
 export default function Header() {
   const [offCanvas, setOffCanvas] = useState(false);
+  const router = useRouter();
 
   //Handle click event on navbar Toggle button
   const navButtonClickHandler = () => {
       setOffCanvas(!offCanvas);
   }
+
+  const hideOffCanvas = () => {
+      setOffCanvas(false);
+  }
+
+  useEffect(() => {
+      router.events.on('routeChangeStart', hideOffCanvas);
+      return () => {
+        router.events.off('routeChangeStart', hideOffCanvas)
+      };
+  }, [hideOffCanvas, router.events]);
 
   return (
       <>

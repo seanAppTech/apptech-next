@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 
 export default function Navigation() {
     const [companyDrop, setCompanyDrop] = useState(false);
     const [productsDrop, setProductsDrop] = useState(false);
-    console.log(productsDrop)
-    console.log(companyDrop)
+    const router = useRouter();
 
     //Click handlers for the dropdown menus
     const productsClickHandler = () => {
@@ -19,6 +19,18 @@ export default function Navigation() {
         setCompanyDrop(!companyDrop);
         setProductsDrop(false);
     }
+
+    const closeDropdowns = () => {
+        setCompanyDrop(false);
+        setProductsDrop(false);
+    }
+  
+    useEffect(() => {
+        router.events.on('routeChangeStart', closeDropdowns);
+        return () => {
+          router.events.off('routeChangeStart', closeDropdowns)
+        };
+    }, [closeDropdowns, router.events]);
     
   return (
       <Div>
