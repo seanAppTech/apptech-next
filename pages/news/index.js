@@ -11,15 +11,22 @@ import { getAllNewsPosts } from "../../lib/api";
 
 export default function News({ posts, paths }) {
 
-  const router = useRouter();
-  
+  let displayPosts;
 
-//   if (router.isFallback) {
-//     return <div>loading...</div>
-//  }
-  // posts.forEach(post => {
-  //   console.log(post.node.featuredImage[0])
-  // })
+  if (!posts) {
+    displayPosts = <div className='error'>There was an error loading posts.</div>;
+ } else {
+    displayPosts = posts.map(post => (
+      <NewsCard  
+        // img={post.node.featuredImage}
+        title={post.node.title} 
+        excerpt={post.node.excerpt} 
+        date={post.node.date} 
+        link={"/news/" + posts.slug}
+      />
+    ))
+  }
+
   return (
     <div>
       <Head>
@@ -31,17 +38,7 @@ export default function News({ posts, paths }) {
       <Main>
         <h1>News</h1>
         <PostsGrid>
-          {
-            posts.map(post => (
-              <NewsCard  
-                // img={post.node.featuredImage}
-                title={post.node.title} 
-                excerpt={post.node.excerpt} 
-                date={post.node.date} 
-                link={"/news/" + posts.slug}
-              />
-            ))
-          }
+          {displayPosts}
         </PostsGrid>
       </Main>
     </div>
@@ -50,7 +47,12 @@ export default function News({ posts, paths }) {
 
 export async function getStaticProps() {
     const res = await getAllNewsPosts();
-    const posts = await res.edges;
+    let posts;
+    if(res) {
+      posts = await res.edges;
+    } else {
+      posts = null;
+    }
   
     return {
       props: {
@@ -83,5 +85,9 @@ export async function getStaticProps() {
     h1 {
       font-weight: 500;
       margin: 50px 0;
+    }
+
+    .error {
+      font-size: 20px;
     }
   `;
