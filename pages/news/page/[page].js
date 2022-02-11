@@ -1,16 +1,15 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
-import {useRouter} from 'next/router';
 
-import PostsGrid from '../../components/UI/Grid/PostsGrid';
-import NewsCard from '../../components/PageComponents/NewsCard';
+import PostsGrid from '../../../components/UI/Grid/PostsGrid';
+import NewsCard from '../../../components/PageComponents/NewsCard';
 
-import { getAllNewsPosts } from "../../lib/api";
+import { getAllNewsPosts } from "../../../lib/api";
+import { getNumberOfPosts } from '../../../lib/api';
 
 
 export default function News({ posts }) {
-
   let displayPosts;
 
   if (!posts) {
@@ -24,7 +23,7 @@ export default function News({ posts }) {
             title={post.node.title} 
             excerpt={post.node.excerpt} 
             date={post.node.date} 
-            link={`news/${post.node.slug}`}
+            link={`../${post.node.slug}`}
             key={post.node.id}
           />
         );
@@ -34,7 +33,7 @@ export default function News({ posts }) {
             title={post.node.title} 
             excerpt={post.node.excerpt} 
             date={post.node.date} 
-            link={`news/${post.node.slug}`}
+            link={`../${post.node.slug}`}
             key={post.node.id}
           />
         );
@@ -78,20 +77,25 @@ export async function getStaticProps() {
     }
   }
 
-  // export async function getStaticPaths() {
-  //   const res = await getAllNewsPosts();
-  //   const posts = await res.edges;
+  export async function getStaticPaths() {
+    const count = await getNumberOfPosts();
+    const perPage = 12;
+    const numberOfPages = count / perPage;
+
+    const pages = [];
+
+    for(let i = 1; i <= numberOfPages; i++) {
+        pages.push(i);
+    }
   
-  //   // Get the paths we want to pre-render based on posts
-  //   const paths = posts.map((post) => ({
-  //     params: { slug: post.slug },
-  //   }))
+    // Get the paths we want to pre-render based on page
+    const paths = pages.map((page) => `/news/page/${page}`) || [];
   
-  //   // We'll pre-render only these paths at build time.
-  //   // { fallback: blocking } will server-render pages
-  //   // on-demand if the path doesn't exist.
-  //   return { paths, fallback: 'blocking' }
-  // }
+    // We'll pre-render only these paths at build time.
+    // { fallback: blocking } will server-render pages
+    // on-demand if the path doesn't exist.
+    return { paths, fallback: 'blocking' }
+  }
 
   //styles 
   const Main = styled.main`
