@@ -15,7 +15,7 @@ export default function TeamMember({ image, name, title, linkedIn }) {
         </div>
         <h5>{name}</h5>
         <p>{title}</p>
-        <a href={linkedIn} className="linkedin">
+        <a href={linkedIn} target="_blank" rel="noopener noreferrer" className="linkedin">
             <Image 
                 src="/images/linkedinDark.png"
                 alt="LinkedIn"

@@ -76,7 +76,7 @@ const SiteFooter = styled.footer`
     .wrapper {
         max-width: 1200px;
         margin: 100px auto 50px;
-        padding: 20px;
+        padding: 100px 20px 20px;
     }
 
     .footerGrid {
@@ -92,7 +92,8 @@ const SiteFooter = styled.footer`
             display: block;
         }
         .wrapper {
-            margin-bottom: 10px;
+            margin: 100px auto 10px;
+            padding: 20px;
         }
     }
 
