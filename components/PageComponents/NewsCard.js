@@ -62,6 +62,10 @@ const Div = styled.div`
         padding: 30px;
     }
 
+    .postInfo {
+        margin-bottom: 20px;
+    }
+
     h3 {
         font-size: 16px;
         font-weight: 500;
