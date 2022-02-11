@@ -24,7 +24,7 @@ export default function News({ posts }) {
             title={post.node.title} 
             excerpt={post.node.excerpt} 
             date={post.node.date} 
-            link={"/news/" + posts.slug}
+            link={`news/${post.node.slug}`}
             key={post.node.id}
           />
         );
@@ -34,7 +34,7 @@ export default function News({ posts }) {
             title={post.node.title} 
             excerpt={post.node.excerpt} 
             date={post.node.date} 
-            link={"/news/" + posts.slug}
+            link={`news/${post.node.slug}`}
             key={post.node.id}
           />
         );

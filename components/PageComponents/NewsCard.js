@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import dateConversion from '../../lib/date';
+import NewsSticker from './NewsSticker';
 
 export default function NewsCard({ img, title, excerpt, date, link }) {
     let newsImage;
@@ -44,12 +45,15 @@ const Div = styled.div`
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 15%);
     border: 0 solid #818a91;
     border-radius: 3px;
+    overflow: hidden;
     padding-bottom: 35px;
     position: relative;
     color: ${props => props.theme.colors.dark};
 
     .imgWrapper {
         position: relative;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 250px;
     }
