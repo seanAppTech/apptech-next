@@ -56,6 +56,11 @@ export default function News({ posts }) {
         <PostsGrid>
           {displayPosts}
         </PostsGrid>
+        <div className='postsNav'>
+          <span className='nextLink'>
+            <Link href="news/page/2">Next</Link>
+          </span>
+        </div>
       </Main>
     </div>
   )
@@ -77,21 +82,6 @@ export async function getStaticProps() {
       revalidate: 10, // In seconds
     }
   }
-
-  // export async function getStaticPaths() {
-  //   const res = await getAllNewsPosts();
-  //   const posts = await res.edges;
-  
-  //   // Get the paths we want to pre-render based on posts
-  //   const paths = posts.map((post) => ({
-  //     params: { slug: post.slug },
-  //   }))
-  
-  //   // We'll pre-render only these paths at build time.
-  //   // { fallback: blocking } will server-render pages
-  //   // on-demand if the path doesn't exist.
-  //   return { paths, fallback: 'blocking' }
-  // }
 
   //styles 
   const Main = styled.main`

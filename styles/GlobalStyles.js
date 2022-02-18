@@ -118,4 +118,25 @@ export const GlobalStyles = createGlobalStyle`
     background: #fff;
     border: 0.2px solid ${({ theme }) => theme.colors.primary};
   }
+
+  .postsNav {
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+    .previousLink {
+      position: absolute;
+      top: 50px;
+      left: 10px;
+    }
+  
+    .nextLink {
+      position: absolute;
+      top: 50px;
+      right: 10px;
+    }
+  }
+
+  
 `;

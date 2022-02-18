@@ -1,21 +1,43 @@
+import next from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 import NewsSticker from '../../components/PageComponents/NewsSticker';
+import Spinner from '../../components/UI/Spinner';
 
-import { getAllPostsWithSlug, getPost } from "../../lib/api";
+import { 
+  getAllPostsWithSlug, 
+  getPost, getPostCursorById, 
+  getNextNewsPost,
+  getPreviousNewsPost 
+} from "../../lib/api";
 import dateConversion from '../../lib/date';
 
 
-export default function Post({ post }) {
-
+export default function Post({ post, previousPost, nextPost, notFound }) {
+  const router = useRouter();
   let displayPost;
-  let postDate = new Date(post.date);
+    //If there's an error, reroute to 404
+    if(notFound) {
+      useEffect(() => {
+        router.push('/404');
+      }, []);
+    }
 
+    //Render previous button if previousPost
+    const previous = previousPost ? <Link href={`/news/${previousPost.slug}`}>{(previousPost.title.substring(0, 35) + '...')}</Link> : null;
+
+    //Render next button if nextPost
+    const next = nextPost ? <Link href={`/news/${nextPost.slug}`}>{(nextPost.title.substring(0, 35) + '...')}</Link> : null;
+
+    //display post or loading
     if (!post) {
-        displayPost = <div className='error'>There was an error loading this post.</div>;
+        displayPost = <Spinner />;
     } else {
+      const postDate = new Date(post.date);
         displayPost = (
           <>
             <NewsSticker />
@@ -41,7 +63,14 @@ export default function Post({ post }) {
 
       <Main>
         {displayPost}
-        
+        <div className='postsNav'>
+          <span className='previousLink'>
+            {previous}
+          </span>
+          <span className='nextLink'>
+            {next}
+          </span>
+        </div>
       </Main>
     </div>
   )
@@ -64,13 +93,34 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getPost(params.slug);
+  try {
+    //Post
+    const data = await getPost(params.slug);
+    
+    //Get Previous and Next posts for navigation
+    const postID = data.post.postId;
+    const cursorIndex = await getPostCursorById(postID);
+    const cursor = cursorIndex.edges[0].cursor;
 
-  return {
-    props: {
-      post: data.post
-    }
-  };
+    const getPreviousPost = await getPreviousNewsPost(cursor);
+    let previousPost; 
+    getPreviousPost.nodes[0] ? previousPost = getPreviousPost.nodes[0] : previousPost = null;
+    
+
+    const getNextPost = await getNextNewsPost(cursor);
+    let nextPost;
+    getNextPost.nodes[0] ? nextPost = getNextPost.nodes[0] : nextPost = null;
+    return {
+      props: {
+        notFound: false,
+        post: data.post,
+        previousPost: previousPost,
+        nextPost: nextPost
+      }
+    };
+  } catch {
+    return { notFound: true }
+  }
 }
 
   //styles 
