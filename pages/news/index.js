@@ -12,10 +12,12 @@ import { getAllNewsPosts } from "../../lib/api";
 export default function News({ posts }) {
 
   let displayPosts;
+  let nextPage;
 
   if (!posts) {
     displayPosts = <div className='error'>There was an error loading posts.</div>;
  } else {
+    nextPage = <Link href="news/page/2">Next</Link>;
     displayPosts = posts.map(post => {
       if(post.node.featuredImage) {
         return (
@@ -58,7 +60,7 @@ export default function News({ posts }) {
         </PostsGrid>
         <div className='postsNav'>
           <span className='nextLink'>
-            <Link href="news/page/2">Next</Link>
+            {nextPage}
           </span>
         </div>
       </Main>
@@ -86,6 +88,7 @@ export async function getStaticProps() {
   //styles 
   const Main = styled.main`
     max-width: ${props => props.theme.breakpoint.laptop};
+    padding: 10px;
     margin: auto;
 
     h1 {

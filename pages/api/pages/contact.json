@@ -1,0 +1,26 @@
+{
+    "contactInformation": [
+        {
+            "id": 1,
+            "icon": "/images/svg/phoneblank.svg",
+            "linkName": "PHONE",
+            "linkText": "(760) 707-5959",
+            "link": "tel:+17607075959"
+        },
+        {
+            "id": 2,
+            "icon": "/images/svg/address.svg",
+            "linkName": "ADDRESS",
+            "linkText": "5876 Owens Ave. Ste. 100 Carlsbad, CA 92008",
+            "link": "https://www.google.com/maps/place/5876+Owens+Ave+STE+100,+Carlsbad,+CA+92008/data=!4m2!3m1!1s0x80dc73417503fad1:0x48bba5b11b250339?sa=X&ved=2ahUKEwjL8f3n_pP2AhUhD0QIHbiwB-sQ8gF6BAgMEAE"
+        },
+        {
+            "id": 3,
+            "icon": "/images/svg/mail.svg",
+            "linkName": "EMAIL",
+            "linkText": "info@apptechcorp.com",
+            "link": "mailto:info@apptechcorp.com"
+        }
+    ],
+    "banner": "https://apptechcorp.com/wp-content/uploads/2021/12/imagea027712240954bf922e4c0a17a3ef44ce8765ca058001c9babc0c0c3f924639a-scaled.jpg"
+}

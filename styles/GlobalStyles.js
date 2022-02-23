@@ -21,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
   main {
     width: 100%;
     padding: 60px 0 0;
+    margin: 0;
   }
 
   .innerContent {
@@ -138,5 +139,13 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .srOnly {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
   
 `;

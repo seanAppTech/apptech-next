@@ -127,11 +127,16 @@ export async function getStaticProps({ params }) {
   const Main = styled.main`
     max-width: ${props => props.theme.breakpoint.laptop};
     margin: 0 auto;
+    padding: 10px;
     padding-top: 100px;
 
     h1 {
       font-weight: 400;
       margin: 20px 0;
+
+      @media (max-width: ${props => props.theme.breakpoint.tablet}) {
+        font-size: 2rem;
+      }
     }
 
     .date {

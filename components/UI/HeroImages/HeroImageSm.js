@@ -21,4 +21,8 @@ const Div = styled.div`
     position: relative;
     height: 175px;
     overflow: hidden;
+
+    @media (min-width: ${props => props.theme.breakpoint.tablet}) {
+      height: 250px;
+    }
 `;
