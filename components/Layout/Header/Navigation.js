@@ -60,15 +60,15 @@ export default function Navigation() {
                 </button>
                 <div className={companyDrop ? "dropdownMenu companyDrop active" : "dropdownMenu companyDrop"} aria-labelledby="companyDropdown">
                     <Link  
-                        href="/company/about"
+                        href="/company"
                         className="dropLinks"
                         >About Us</Link>
                     <Link  
-                        href="/company/about/#intellectual-property"
+                        href="/company/#intellectual-property"
                         className="dropLinks"
                         >Intellectual Property</Link>
                     <Link  
-                        href="/company/about/#meet-the-team"
+                        href="/company/#meet-the-team"
                         className="dropLinks"
                         >Meet the Team</Link>
                     <Link  

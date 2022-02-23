@@ -1,124 +1,183 @@
 {
-        "overview": {
-            "title": "Company Overview",
-            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/company_overview_hero_image_edit-scaled.jpg",
-            "header": "Company Overview",
-            "quote": {
-                "text": "\"Built upon 200 years of combined financial and technology expertise, the AppTech fintech platform will set the gold standard for the delivery of continuous digital financial innovation and commerce experiences. Our success, and that of our clients, will be attributed to an ongoing commitment to solving challenges through technology enablement.\"",
-                "name": "Luke D'Angelo",
-                "position": "CEO"
-            }
+    "overview": {
+        "title": "Company Overview",
+        "image": "https://apptechcorp.com/wp-content/uploads/2021/12/company_overview_hero_image_edit-scaled.jpg",
+        "header": "Company Overview",
+        "quote": {
+            "text": "\"Built upon 200 years of combined financial and technology expertise, the AppTech fintech platform will set the gold standard for the delivery of continuous digital financial innovation and commerce experiences. Our success, and that of our clients, will be attributed to an ongoing commitment to solving challenges through technology enablement.\"",
+            "signature": "https://apptechcorp.com/wp-content/uploads/2021/12/Lukes_signature.png",
+            "name": "Luke D'Angelo",
+            "position": "CEO"
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "summary": "AppTech Payments Corp. is a publicly listed FinTech company utilizing innovative payment processing and digital banking technologies to complement our core merchant services capabilities. Our patented and proprietary software will provide progressive and adaptable products that are available through a suite of synergistic offerings directly to merchants, banking institutions and business enterprises.",
+        "developing": "AppTech is developing an embedded, highly secure digital payments and banking platform that powers commerce experiences for clients and their customers. Based upon industry standards for payment and banking protocols, we will offer standalone products and fully integrated solutions that deliver innovative, unparalleled payments, banking, and financial services experiences. Our processing technologies can be taken off-the-shelf or tapped into via our RESTful API to build fully branded and customizable experiences while supporting tokenized, multi-channel, and multi-method transactions."
+    },
+    "team": [
+        {
+            "id": 1,
+            "name": "Luke D'Angelo",
+            "title": "Chief Executive Officer & Executive Director",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/LukeDAngelo-1.png",
+            "linkedIn": "https://www.linkedin.com/in/lukedangelo1/"
         },
-        "about": {
-            "title": "About Us",
-            "summary": "AppTech Payments Corp. is a publicly listed FinTech company utilizing innovative payment processing and digital banking technologies to complement our core merchant services capabilities. Our patented and proprietary software will provide progressive and adaptable products that are available through a suite of synergistic offerings directly to merchants, banking institutions and business enterprises.",
-            "developing": "AppTech is developing an embedded, highly secure digital payments and banking platform that powers commerce experiences for clients and their customers. Based upon industry standards for payment and banking protocols, we will offer standalone products and fully integrated solutions that deliver innovative, unparalleled payments, banking, and financial services experiences. Our processing technologies can be taken off-the-shelf or tapped into via our RESTful API to build fully branded and customizable experiences while supporting tokenized, multi-channel, and multi-method transactions."
+        {
+            "id": 2,
+            "name": "Gary Wachs",
+            "title": "Chief Financial Officer",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/GaryWachs.png",
+            "linkedIn": "https://www.linkedin.com/company/apptech-corp/"
         },
-        "team": [
-            {
-                "id": 1,
-                "name": "Luke D'Angelo",
-                "title": "Chief Executive Officer & Executive Director",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/LukeDAngelo-1.png",
-                "linkedIn": "https://www.linkedin.com/in/lukedangelo1/"
-            },
-            {
-                "id": 2,
-                "name": "Gary Wachs",
-                "title": "Chief Financial Officer",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/GaryWachs.png",
-                "linkedIn": "https://www.linkedin.com/company/apptech-corp/"
-            },
-            {
-                "id": 3,
-                "name": "Virgilio Llapitan",
-                "title": "President",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/VirgilLlapitan-1.png",
-                "linkedIn": "https://www.linkedin.com/in/virgil-llapitan/"
-            },
-            {
-                "id": 4,
-                "name": "Ben Jenkins",
-                "title": "Chief Technology Officer",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/BenJenkins-1.png",
-                "linkedIn": "https://www.linkedin.com/in/benjaminjenkins/"
-            },
-            {
-                "id": 5,
-                "name": "Chad Nelley",
-                "title": "Chief Operations Officer",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ChadNelley.png",
-                "linkedIn": "https://www.linkedin.com/in/chadnelley/"
-            },
-            {
-                "id": 6,
-                "name": "Bryan Guy",
-                "title": "SVP of Product & Experiences",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/BryanGuy-1.png",
-                "linkedIn": "https://www.linkedin.com/in/bryanguyjd/"
-            },
-            {
-                "id": 7,
-                "name": "Aram A. Aghapour",
-                "title": "SVP of Research, Development and InfraOps",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Aram-1.png",
-                "linkedIn": "https://www.linkedin.com/in/aramaghapour/"
-            },
-            {
-                "id": 8,
-                "name": "Nick Nolasco",
-                "title": "Chief Architect",
-                "image": "https://apptechcorp.com/wp-content/uploads/2022/01/Nick_800px.png",
-                "linkedIn": "https://www.linkedin.com/in/nick-nolasco-5617209/"
-            },
-            {
-                "id": 9,
-                "name": "Scott Carnley",
-                "title": "Director of Engineering",
-                "image": "https://apptechcorp.com/wp-content/uploads/2022/01/Scott_800px.png",
-                "linkedIn": "https://www.linkedin.com/in/scott-carnley-11b8274/"
-            },
-            {
-                "id": 10,
-                "name": "Christine Carroll",
-                "title": "Corporate Operations Manager",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Christine-1.png",
-                "linkedIn": "https://www.linkedin.com/in/christine-carroll-3b2436159/"
-            },
-            {
-                "id": 11,
-                "name": "Ron Hill",
-                "title": "Director of Merchant Services",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/RonHill-1.png",
-                "linkedIn": "https://www.linkedin.com/in/ronhill1/"
-            },
-            {
-                "id": 12,
-                "name": "Tyler McCollum",
-                "title": "Director of Information Technology",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/TylerMcCollum.png",
-                "linkedIn": "https://www.linkedin.com/in/tyler-mccollum-8bab4b119/"
-            },
-            {
-                "id": 13,
-                "name": "Sean Standen",
-                "title": "Web Development & Content Manager",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/SeanStanden.png",
-                "linkedIn": "https://www.linkedin.com/in/sean-standen/"
-            },
-            {
-                "id": 14,
-                "name": "Emily Finch",
-                "title": "Graphic Designer & Social Media Specialist",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/EmilyFinch-1.png",
-                "linkedIn": "https://www.linkedin.com/in/emily-finch-ef/"
-            },
-            {
-                "id": 15,
-                "name": "Anthony Shall",
-                "title": "Associate Product & Project Manager",
-                "image": "https://apptechcorp.com/wp-content/uploads/2021/12/AnthonyShall-1.png",
-                "linkedIn": "https://www.linkedin.com/in/anthony-shall-a77a691a/"
-            }
-        ]
+        {
+            "id": 3,
+            "name": "Virgilio Llapitan",
+            "title": "President",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/VirgilLlapitan-1.png",
+            "linkedIn": "https://www.linkedin.com/in/virgil-llapitan/"
+        },
+        {
+            "id": 4,
+            "name": "Ben Jenkins",
+            "title": "Chief Technology Officer",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/BenJenkins-1.png",
+            "linkedIn": "https://www.linkedin.com/in/benjaminjenkins/"
+        },
+        {
+            "id": 5,
+            "name": "Chad Nelley",
+            "title": "Chief Operations Officer",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ChadNelley.png",
+            "linkedIn": "https://www.linkedin.com/in/chadnelley/"
+        },
+        {
+            "id": 6,
+            "name": "Bryan Guy",
+            "title": "SVP of Product & Experiences",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/BryanGuy-1.png",
+            "linkedIn": "https://www.linkedin.com/in/bryanguyjd/"
+        },
+        {
+            "id": 7,
+            "name": "Aram A. Aghapour",
+            "title": "SVP of Research, Development and InfraOps",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Aram-1.png",
+            "linkedIn": "https://www.linkedin.com/in/aramaghapour/"
+        },
+        {
+            "id": 8,
+            "name": "Nick Nolasco",
+            "title": "Chief Architect",
+            "image": "https://apptechcorp.com/wp-content/uploads/2022/01/Nick_800px.png",
+            "linkedIn": "https://www.linkedin.com/in/nick-nolasco-5617209/"
+        },
+        {
+            "id": 9,
+            "name": "Scott Carnley",
+            "title": "Director of Engineering",
+            "image": "https://apptechcorp.com/wp-content/uploads/2022/01/Scott_800px.png",
+            "linkedIn": "https://www.linkedin.com/in/scott-carnley-11b8274/"
+        },
+        {
+            "id": 10,
+            "name": "Christine Carroll",
+            "title": "Corporate Operations Manager",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Christine-1.png",
+            "linkedIn": "https://www.linkedin.com/in/christine-carroll-3b2436159/"
+        },
+        {
+            "id": 11,
+            "name": "Ron Hill",
+            "title": "Director of Merchant Services",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/RonHill-1.png",
+            "linkedIn": "https://www.linkedin.com/in/ronhill1/"
+        },
+        {
+            "id": 12,
+            "name": "Tyler McCollum",
+            "title": "Director of Information Technology",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/TylerMcCollum.png",
+            "linkedIn": "https://www.linkedin.com/in/tyler-mccollum-8bab4b119/"
+        },
+        {
+            "id": 13,
+            "name": "Sean Standen",
+            "title": "Web Development & Content Manager",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/SeanStanden.png",
+            "linkedIn": "https://www.linkedin.com/in/sean-standen/"
+        },
+        {
+            "id": 14,
+            "name": "Emily Finch",
+            "title": "Graphic Designer & Social Media Specialist",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/EmilyFinch-1.png",
+            "linkedIn": "https://www.linkedin.com/in/emily-finch-ef/"
+        },
+        {
+            "id": 15,
+            "name": "Anthony Shall",
+            "title": "Associate Product & Project Manager",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/AnthonyShall-1.png",
+            "linkedIn": "https://www.linkedin.com/in/anthony-shall-a77a691a/"
+        }
+    ],
+    "press": [
+        {
+            "id": 1,
+            "title": "AppTech Payments Corp. Kicks off 2022 By Welcoming Nicholas Nolasco and Scott Carnley as Senior Leaders within the Company’s Research, Development & InfraOps Team",
+            "date": "01/13/2022",
+            "source": "Globe Newswire",
+            "link": "https://www.globenewswire.com/news-release/2022/01/13/2366216/0/en/AppTech-Payments-Corp-Kicks-off-2022-By-Welcoming-Nicholas-Nolasco-and-Scott-Carnley-as-Senior-Leaders-within-the-Company-s-Research-Development-InfraOps-Team.html/"
+        },
+        {
+            "id": 2,
+            "title": "AppTech Payments Corp. Announces Pricing of $15.0 Million Underwritten Public Offering and Nasdaq Listing",
+            "date": "1/07/2022",
+            "source": "Globe Newswire",
+            "link": "https://www.globenewswire.com/news-release/2022/01/05/2361272/0/en/AppTech-Payments-Corp-Announces-Pricing-of-15-0-Million-Underwritten-Public-Offering-and-Nasdaq-Listing.html/"
+        },
+        {
+            "id": 3,
+            "title": "AppTech Payments Corp. Announces Closing of $15.0 Million Underwritten Public Offering",
+            "date": "01/07/2022",
+            "source": "Globe Newswire",
+            "link": "https://www.globenewswire.com/news-release/2022/01/07/2363364/0/en/AppTech-Payments-Corp-Announces-Closing-of-15-0-Million-Underwritten-Public-Offering-and-Nasdaq-Listing.html/"
+        },
+        {
+            "id": 4,
+            "title": "30 Fastest Growing Tech Companies 2021: With its patented innovative solutions, AppTech Corp. is expanding transactions all over the world",
+            "date": "05/25/21",
+            "source": "Silicon Review",
+            "link": "https://thesiliconreview.com/magazine/profile/apptech-corp-pioneer-in-digital-banking-technologies/"
+        },
+        {
+            "id": 5,
+            "title": "50 Leading Companies of the Year 2021: An innovator with exceptional payment processing technologies to complement its core merchant services capabilities: AppTech Corp.",
+            "date": "05/04/2021",
+            "source": "Silicon Review",
+            "link": "https://thesiliconreview.com/magazine/profile/apptech-corp-exceptional-payment-processing-technologies/"
+        },
+        {
+            "id": 6,
+            "title": "Emerging Markets Report: A Marriage Made in Manama",
+            "date": "03/23/2021",
+            "source": "OTC Markets Global Newswire",
+            "link": "https://www.otcmarkets.com/stock/APCX/news/Emerging-Markets-Report-A-Marriage-Made-in-Manama?id=294726"
+        },
+        {
+            "id": 7,
+            "title": "Emerging Markets Report: A Bright Future for Fintech and FinTEXT",
+            "date": "01/12/2021",
+            "source": "OTC Markets Global Newswire",
+            "link": "https://www.otcmarkets.com/stock/APCX/news/Emerging-Markets-Report-A-Bright-Future-for-Fintech-and-FinTEXT?id=285898"
+        },
+        {
+            "id": 8,
+            "title": "Emerging Markets Report: Fabulous Fintech",
+            "date": "10/29/2020",
+            "source": "OTC Markets Global Newswire",
+            "link": "https://www.otcmarkets.com/stock/APCX/news/Emerging-Markets-Report-Fabulous-Fintech?id=278524"
+        }
+    ]
 }
