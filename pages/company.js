@@ -6,10 +6,11 @@ import HeroImageLg from '../components/UI/HeroImages/HeroImageLg';
 import TeamMember from '../components/PageComponents/TeamMember';
 import TeamGrid from '../components/UI/Grid/TeamGrid';
 import Press from '../components/PageComponents/Company/Press';
+import ContentGrid from '../components/UI/Grid/ContentGrid';
 
 
 export default function Company({ data }) {
-  const { team, press, overview } = data;
+  const { overview, about, team, press } = data;
 
   return (
     <div>
@@ -20,16 +21,17 @@ export default function Company({ data }) {
       </Head>
 
       <Main>
+        <section id="company-overview">
         <HeroImageLg
           image={overview.image}
           title={overview.title}
           objectPosition="0 0"
         >
-          <div className='quoteWrapper'>
+          <div className='innerContent quoteWrapper'>
             <div className='wrapper'>
               <h1>{overview.title}</h1>
               <p>{overview.quote.text}</p>
-              <div className='imgWrapper'>
+              <div className='signature'>
                 <Image 
                   src={overview.quote.signature}
                   layout="fill"
@@ -41,7 +43,31 @@ export default function Company({ data }) {
             </div>
           </div>
         </HeroImageLg>
-        <div className='innerContent'>
+        </section>
+
+        <section id="about">
+          <h2>{about.title}</h2>
+          <ContentGrid>
+            <p>{about.summary}</p>
+            <p>{about.developing}</p>
+          </ContentGrid>
+        </section>
+
+        <section id="intellectual-property">
+          <h2>Intellectual Property</h2>
+          <ContentGrid>
+            <p>{about.summary}</p>
+              <Image
+                src="https://apptechcorp.com/wp-content/uploads/2021/12/Image03.jpg"
+                height={366}
+                width={550}
+                layout="responsive"
+              />
+          </ContentGrid>
+        </section>
+
+        <section id="meet-the-team">
+          <h2>Meet The Team</h2>
           <TeamGrid>
             {
               team.map(person => (
@@ -55,11 +81,11 @@ export default function Company({ data }) {
               ))
             }
           </TeamGrid>
-        </div>
-        <div className='pressSection'>
+        </section>
+        <section id="press-section" className='pressSection'>
           <div className='triangleDown' />
           <Press items={press} />
-        </div>
+        </section>
       </Main>
     </div>
   )
@@ -77,14 +103,14 @@ export async function getStaticProps() {
 }
 
 const Main = styled.main`
-  .quoteWrapper {
-    width: 100%;
-    max-width: ${props => props.theme.breakpoint.laptop};
-    height: 100%;
-    margin: auto;
-    padding: 15px;
+  h2 {
+    text-align: center;
+    margin: 50px auto 25px;
   }
-  
+
+  .quoteWrapper {
+    height: 100%;
+  }
 
   .wrapper {
     width: 100%;
@@ -106,9 +132,16 @@ const Main = styled.main`
     }
   }
   
-  .imgWrapper {
+  .signature {
     width: 150px;
     height: 60px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .imgWrapper {
+    width: 650px;
+    height: 400px; 
     position: relative;
     margin-bottom: 10px;
   }
@@ -128,6 +161,7 @@ const Main = styled.main`
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.colors.quaternary};
+    margin: 0;
 
     .triangleDown {
       position: absolute;

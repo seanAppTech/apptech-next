@@ -24,11 +24,15 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  section {
+    margin: 0 0 75px;
+  }
+
   .innerContent {
     width: 100%;
     max-width: ${({ theme }) => theme.breakpoint.laptop};
     margin: auto;
-    padding: 10px;
+    padding: 15px;
   }
 
   a {
