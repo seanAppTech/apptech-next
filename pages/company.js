@@ -19,12 +19,13 @@ export default function Company({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <Main>
         <HeroImageLg
           image={overview.image}
           title={overview.title}
+          objectPosition="0 0"
         >
-          <Div>
+          <div className='quoteWrapper'>
             <div className='wrapper'>
               <h1>{overview.title}</h1>
               <p>{overview.quote.text}</p>
@@ -38,7 +39,7 @@ export default function Company({ data }) {
               <span className='name'>{overview.quote.name}</span>
               <span className='position'>{overview.quote.position}</span>
             </div>
-          </Div>
+          </div>
         </HeroImageLg>
         <div className='innerContent'>
           <TeamGrid>
@@ -54,9 +55,12 @@ export default function Company({ data }) {
               ))
             }
           </TeamGrid>
+        </div>
+        <div className='pressSection'>
+          <div className='triangleDown' />
           <Press items={press} />
         </div>
-      </main>
+      </Main>
     </div>
   )
 }
@@ -72,12 +76,15 @@ export async function getStaticProps() {
     }
 }
 
-const Div = styled.div`
-  width: 100%;
-  max-width: ${props => props.theme.breakpoint.laptop};
-  height: 100%;
-  margin: auto;
-  padding: 15px;
+const Main = styled.main`
+  .quoteWrapper {
+    width: 100%;
+    max-width: ${props => props.theme.breakpoint.laptop};
+    height: 100%;
+    margin: auto;
+    padding: 15px;
+  }
+  
 
   .wrapper {
     width: 100%;
@@ -111,5 +118,26 @@ const Div = styled.div`
   }
   span.position {
     color: ${props => props.theme.colors.grey}
+  }
+
+  .pressSection {
+    position: relative;
+    width: 100%;
+    height: 425px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${props => props.theme.colors.quaternary};
+
+    .triangleDown {
+      position: absolute;
+      top: 0;
+      margin: 0 auto;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-top: 40px solid #fff;
+    }
   }
 `;

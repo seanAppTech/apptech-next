@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-export default function HeroImageLg({ image, title, children }) {
+export default function HeroImageLg({ image, title, children, objectPosition }) {
   return (
       <Div>
           <Image 
@@ -11,6 +11,7 @@ export default function HeroImageLg({ image, title, children }) {
             layout="fill"
             objectFit="cover"
             priority
+            objectPosition={objectPosition}
           />
           <div className='content'>
               {children}
