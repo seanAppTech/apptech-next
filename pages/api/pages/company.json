@@ -15,6 +15,49 @@
         "summary": "AppTech Payments Corp. is a publicly listed FinTech company utilizing innovative payment processing and digital banking technologies to complement our core merchant services capabilities. Our patented and proprietary software will provide progressive and adaptable products that are available through a suite of synergistic offerings directly to merchants, banking institutions and business enterprises.",
         "developing": "AppTech is developing an embedded, highly secure digital payments and banking platform that powers commerce experiences for clients and their customers. Based upon industry standards for payment and banking protocols, we will offer standalone products and fully integrated solutions that deliver innovative, unparalleled payments, banking, and financial services experiences. Our processing technologies can be taken off-the-shelf or tapped into via our RESTful API to build fully branded and customizable experiences while supporting tokenized, multi-channel, and multi-method transactions."
     },
+    "patents": [
+        {
+            "title": "System and Method for Delivering Web Content to a Mobile Device",
+            "description": "These patents allow companies to send URLs in text messages. They are responsible for helping to create the industry protocol known as Wireless Access Protocol (WAP) Push. WAP is very commonly used when you receive a text message with a link to download content or an application to your smart phone.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Image03.jpg",
+            "patentLinks": [
+                {
+                    "number": "8,073,895",
+                    "link": "https://pdfpiw.uspto.gov/.piw?PageNum=0&docid=08073895&IDKey=&HomeUrl=http%3A%2F%2Fpdfpiw.uspto.gov%2F",
+                    "assignment": "https://assignment.uspto.gov/patent/index.html#/patent/search/resultAbstract?id=8073895&type=patNum"
+                },
+                {
+                    "number": "8,572,166",
+                    "link": "https://pdfpiw.uspto.gov/.piw?PageNum=0&docid=8572166&IDKey=&HomeUrl=http%3A%2F%2Fpdfpiw.uspto.gov%2F",
+                    "assignment": "https://assignment.uspto.gov/patent/index.html#/patent/search/resultAbstract?id=8572166&type=patNum"
+                }
+            ]
+        },
+        {
+            "title": "Mobile-to-Mobile Payment System and Method",
+            "description": "This patent was developed for moving money from cellphone to cellphone, person to person, or person to business. We believe it sparked the creation of the P2P (Peer to Peer) Payments industry by allowing users to move money by text message, click, tap, or scan.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Image04.jpg",
+            "patentLinks": [
+                {
+                    "number": "8,369,828",
+                    "link": "https://pdfpiw.uspto.gov/.piw?PageNum=0&docid=08369828&IDKey=&HomeUrl=http%3A%2F%2Fpdfpiw.uspto.gov%2F",
+                    "assignment": "https://assignment.uspto.gov/patent/index.html#/patent/search/resultAbstract?id=8369828&type=patNum"
+                }
+            ]
+        },
+        {
+            "title": "Computer to Mobile Two-Way Chat System and Method",
+            "description": "This patent allows for communication from a computer to mobile phone device via SMS text messaging. This or similar technology is most used in social media messenger apps or chat features. When chatting with your friends on your favorite platform, the messages are not moving cellphone to cellphone. Rather, the messages you send through your phone are sent to the app’s computer, processed, and then routed to the receiver’s mobile device.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Image02.jpg",
+            "patentLinks": [
+                {
+                    "number": "8,315,184",
+                    "link": "https://pdfpiw.uspto.gov/.piw?PageNum=0&docid=8315184&IDKey=&HomeUrl=http%3A%2F%2Fpdfpiw.uspto.gov%2F",
+                    "assignment": "https://assignment.uspto.gov/patent/index.html#/patent/search/resultAbstract?id=8315184&type=patNum"
+                }
+            ]
+        }
+    ],
     "team": [
         {
             "id": 1,
@@ -88,34 +131,41 @@
         },
         {
             "id": 11,
+            "name": "Kaylei Wright",
+            "title": "Corporate Communications Manager",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/KayleiWright-1.png",
+            "linkedIn": "https://www.linkedin.com/in/kaylei-wright/"
+        },
+        {
+            "id": 12,
             "name": "Ron Hill",
             "title": "Director of Merchant Services",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/RonHill-1.png",
             "linkedIn": "https://www.linkedin.com/in/ronhill1/"
         },
         {
-            "id": 12,
+            "id": 13,
             "name": "Tyler McCollum",
             "title": "Director of Information Technology",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/TylerMcCollum.png",
             "linkedIn": "https://www.linkedin.com/in/tyler-mccollum-8bab4b119/"
         },
         {
-            "id": 13,
+            "id": 14,
             "name": "Sean Standen",
             "title": "Web Development & Content Manager",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/SeanStanden.png",
             "linkedIn": "https://www.linkedin.com/in/sean-standen/"
         },
         {
-            "id": 14,
+            "id": 15,
             "name": "Emily Finch",
             "title": "Graphic Designer & Social Media Specialist",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/EmilyFinch-1.png",
             "linkedIn": "https://www.linkedin.com/in/emily-finch-ef/"
         },
         {
-            "id": 15,
+            "id": 16,
             "name": "Anthony Shall",
             "title": "Associate Product & Project Manager",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/AnthonyShall-1.png",
