@@ -91,7 +91,7 @@ export default function Company({ data, posts }) {
 
         <section id="intellectual-property">
           <h2>Intellectual Property</h2>
-          <ContentGrid className="patent">
+          <ContentGrid className="blockSpacing">
             <Patent patent={patents[0]} className='gridItemReverse1' />
             <Image
               src={patents[0].image}
@@ -101,7 +101,7 @@ export default function Company({ data, posts }) {
               className="gridItemReverse2"
             />
           </ContentGrid>
-          <ContentGrid className="patent">
+          <ContentGrid className="blockSpacing">
             <Image
               src={patents[1].image}
               height={366}
@@ -110,7 +110,7 @@ export default function Company({ data, posts }) {
             />
             <Patent patent={patents[1]} />
           </ContentGrid>
-          <ContentGrid className="patent">
+          <ContentGrid className="blockSpacing">
             <Patent patent={patents[2]} className='gridItemReverse1' />
             <Image
               src={patents[2].image}
@@ -237,9 +237,5 @@ const Main = styled.main`
       border-right: 30px solid transparent;
       border-top: 40px solid #fff;
     }
-  }
-
-  .patent {
-    margin: 50px auto;
   }
 `;

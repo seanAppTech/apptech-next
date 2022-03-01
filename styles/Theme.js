@@ -8,7 +8,8 @@ const theme = {
       tertiary: '#F6F9FF',
       hover: '#b8b6e0',
       midnight: '#282491',
-      darkMidnight: '#15213f'
+      darkMidnight: '#15213f',
+      lightGrey: '#f7f7f7'
     },
     breakpoint: {
       mobile: '375px',

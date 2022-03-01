@@ -151,5 +151,9 @@ export const GlobalStyles = createGlobalStyle`
     height:1px;
     overflow:hidden;
   }
+
+  .blockSpacing {
+    margin: 50px auto;
+  }
   
 `;

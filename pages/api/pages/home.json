@@ -1,0 +1,151 @@
+{
+    "hero": {
+        "header": "Powering Commerce Experiences",
+        "imageLg": "https://apptechcorp.com/wp-content/uploads/2021/12/Hero_1920x1080screen.jpg",
+        "imageMd": "https://apptechcorp.com/wp-content/uploads/2021/12/Hero_TabletView.jpg",
+        "imageSm": "https://apptechcorp.com/wp-content/uploads/2021/12/Hero_MobileView.jpg",
+        "description": "Launch omni-channel payments and digital banking solutions through a modular, fintech platform to enable seamless commerce experiences that propel business growth!"
+    },
+    "partners": [
+        {
+            "id": 1,
+            "name": "FIS",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/fis-smaller-270x130.png"
+        },
+        {
+            "id": 2,
+            "name": "Worldpay",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/worldpay-fis-270x130.png"
+        },
+        {
+            "id": 3,
+            "name": "Visa",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/visa-black-smaller-270x130.png"
+        },
+        {
+            "id": 4,
+            "name": "Mastercard",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/mastercard-gray-270x130.png"
+        }
+    ],
+    "features": [
+        {
+            "id": 1,
+            "title": "Enabling secure and scalable payments across all channels",
+            "description": "The Platform provides businesses with everything they need to accept digital payments including credit card and alternative payment processing services.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/EnablingSecure.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Pioneering patented Text-to-Pay technology for contactless payments",
+            "description": "Utilize the Platform to enable SMS payment and invoicing capabilities that simplify and streamline payment acceptance and customer choice.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/PioneeringSMS.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Reinventing business with next generation digital banking",
+            "description": "Backed by an intelligent and secure digital financial technology stack and architecture, our Platform is built to enable payments and banking innovations for nearly any business or use case.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ReinventingBusiness.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Secure applications and seamless digital onboarding",
+            "description": "Best-of-breed cloud and edge security solutions are integrated with the Platform to ensure our solutions provide maximum protection including GDPR and PCI without impacting performance and the overall user experience.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/SecureApplication_New.jpg"
+        }
+    ],
+    "productsAndServices": [
+        {
+            "id": "omni-channel-payments",
+            "name": "Omni-Channel Payments",
+            "description": "Feature rich, embedded payment acceptance and processing, simple integrations and robust capabilities deliver a truly omni-channel payment experience.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/OmniChanneldemo.png",
+            "features": [
+                {
+                    "id": 1,
+                    "name": "Text-to-Pay",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/TextToPay_fixed.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Online & Mobile Payments",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/OnlineAndMobilePayments.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Contactless Payments",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/ContactlessPay_Fixed.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Hosted and Embedded Checkout",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/HostedandEmbeddedCheckout.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Invoicing & Subscriptions",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/InvoicingAndSubscriptions.png"
+                },
+                {
+                    "id": 6,
+                    "name": "Virtual Terminal",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/VirtualTerminal.png"
+                },
+                {
+                    "id": 7,
+                    "name": "Split Payments",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/SplitPayments.png"
+                },
+                {
+                    "id": 8,
+                    "name": "Digital Merchant Onboarding",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/DigitalMerchantOnboarding.png"
+                }
+            ]
+        },
+        {
+            "id": "digital-banking",
+            "name": "Digital Banking",
+            "description": "Transformative digital banking capabilities drive efficiencies, automate outbound payments, and improve financial control and reconciliation.",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/AutomatedFinance.png",
+            "features": [
+                {
+                    "id": 1,
+                    "name": "Banking-as-a-Service",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/BankingAsAService.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Virtual Card Issuing",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/VirtualCard.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Advanced Account Funding and Currency Control",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/AccountFunding_fixed.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Multi-Currency Digital Accounts & IBANs",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/MultiCurrency_Updated.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Currency Management & Settlement",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/CurrencyManagementSettlement.png"
+                },
+                {
+                    "id": 6,
+                    "name": "AML Fraud and Transactional Compliance",
+                    "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/AMLFraud.png"
+                }
+            ]
+        }
+    ],
+    "testimonial": {
+        "name": "Amiya Diwan",
+        "career": "SaaS Entrepreneur",
+        "quote": "\"The AppTech platform represents the type of financial technology required to rapidly launch innovative and scalable solutions. From traditional businesses to fintech startups dialed into web3, AppTech is a must have.\"",
+        "image": "https://apptechcorp.com/wp-content/uploads/2021/12/amiya-diwan.png"
+    } 
+}

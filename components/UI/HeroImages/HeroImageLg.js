@@ -23,7 +23,7 @@ export default function HeroImageLg({ image, title, children, objectPosition }) 
 const Div = styled.div`
     width: 100%;
     position: relative;
-    height: 500px;
+    height: 650px;
     overflow: hidden;
 
     @media screen and (min-width: ${props => props.theme.breakpoint.laptop}) {
