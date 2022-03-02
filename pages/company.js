@@ -82,7 +82,7 @@ export default function Company({ data, posts }) {
         </section>
 
         <section id="about">
-          <h2>{about.title}</h2>
+          <h2 className='sectionHeader'>{about.title}</h2>
           <ContentGrid>
             <p>{about.summary}</p>
             <p>{about.developing}</p>
@@ -90,7 +90,7 @@ export default function Company({ data, posts }) {
         </section>
 
         <section id="intellectual-property">
-          <h2>Intellectual Property</h2>
+          <h2 className='sectionHeader'>Intellectual Property</h2>
           <ContentGrid className="blockSpacing">
             <Patent patent={patents[0]} className='gridItemReverse1' />
             <Image
@@ -123,7 +123,7 @@ export default function Company({ data, posts }) {
         </section>
 
         <section id="meet-the-team">
-          <h2>Meet The Team</h2>
+          <h2 className='sectionHeader'>Meet The Team</h2>
           <TeamGrid>
             {
               team.map(person => (
@@ -140,7 +140,7 @@ export default function Company({ data, posts }) {
         </section>
 
         <section id="recent-news">
-          <h2>News</h2>
+          <h2 className='sectionHeader'>News</h2>
           <PostsGrid>
             {displayRecentNewsPosts}
           </PostsGrid>
@@ -174,11 +174,6 @@ export async function getStaticProps() {
 }
 
 const Main = styled.main`
-  h2 {
-    text-align: center;
-    margin: 50px auto 25px;
-  }
-
   .quoteWrapper {
     height: 100%;
   }

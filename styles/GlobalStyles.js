@@ -78,6 +78,11 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.25;
   }
 
+  .sectionHeader {
+    text-align: center;
+    margin: 50px auto 25px;
+  }
+
   p, a, label, span {
     font-weight: 400;
     font-size: 16px;
@@ -154,6 +159,10 @@ export const GlobalStyles = createGlobalStyle`
 
   .blockSpacing {
     margin: 50px auto;
+  }
+
+  .blockSpacingLg {
+    margin: 100px auto;
   }
   
 `;

@@ -7,12 +7,15 @@ import styled from 'styled-components';
 import HeroImageLg from '../components/UI/HeroImages/HeroImageLg';
 import Partners from '../components/PageComponents/Home/Partners';
 import ContentGrid from '../components/UI/Grid/ContentGrid';
+import ProductsServicesIntro from '../components/PageComponents/Home/ProductsServicesIntro';
 
 
 export default function Home({ data }) {
-  const { hero, partners, features } = data;
+  const { hero, partners, features, productsAndServices } = data;
   const [heroImage, setHeroImage] = useState(hero.imageLg);
 
+  //Check window resize to dynamically render the correct version
+  //of the hero image.
   useEffect(() => {
     window.addEventListener('resize', () => {
       if (window.innerWidth < 800) {
@@ -23,10 +26,13 @@ export default function Home({ data }) {
     });
   }, []);
 
+  //Features section
+  //There are 2 different versions of the ContentGrid here for
+  //which direction the content flows(image left or right).
   const displayFeatures = features.map(feature => {
     if(feature.id % 2) {
       return (
-        <ContentGrid className="blockSpacing" key={feature.id}>
+        <ContentGrid className="blockSpacingLg" key={feature.id}>
         <div className={`${!feature.id % 2 ? '' : 'gridItemReverse1'} featureContent`}>
           <h3>{feature.title}</h3>
           <p>{feature.description}</p>
@@ -43,7 +49,7 @@ export default function Home({ data }) {
       );
     } else {
       return (
-        <ContentGrid className="blockSpacing" key={feature.id}>  
+        <ContentGrid className="blockSpacingLg" key={feature.id}>  
         <Image
           src={feature.image}
           height={366}
@@ -59,9 +65,10 @@ export default function Home({ data }) {
       </ContentGrid>
       );
     }
-});
+  });
 
-  //console.log(data);
+  //ProductsIntro
+  const productsIntro = productsAndServices.map(product => (<ProductsServicesIntro product={product} key={product.id} />));
 
   return (
     <div>
@@ -93,6 +100,14 @@ export default function Home({ data }) {
 
         <section id="features">
           {displayFeatures}
+        </section>
+
+        <section id="products-and-services">
+          <h2 className='sectionHeader'>Products & Services</h2>
+          <ContentGrid className="blockSpacing">
+            {productsIntro}
+            
+          </ContentGrid>
         </section>
       </Main>
     </div>

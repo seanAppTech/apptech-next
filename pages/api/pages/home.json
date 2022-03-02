@@ -60,6 +60,8 @@
             "name": "Omni-Channel Payments",
             "description": "Feature rich, embedded payment acceptance and processing, simple integrations and robust capabilities deliver a truly omni-channel payment experience.",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/OmniChanneldemo.png",
+            "excerpt": "Integrated portfolio of merchant and peer-to-peer payment processing solutions including online, mobile, POS, QR and Text-to-Pay.",
+            "backgroundImg": "https://apptechcorp.com/wp-content/uploads/2021/12/Blurred_Image01.jpg",
             "features": [
                 {
                     "id": 1,
@@ -108,6 +110,8 @@
             "name": "Digital Banking",
             "description": "Transformative digital banking capabilities drive efficiencies, automate outbound payments, and improve financial control and reconciliation.",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/AutomatedFinance.png",
+            "excerpt": "Complete suite of digital banking experiences and services including merchant onboarding and KYC, pay-in and pay-out, primary and sub-account creation and more.",
+            "backgroundImg": "https://apptechcorp.com/wp-content/uploads/2021/12/BlurredImage02.jpg",
             "features": [
                 {
                     "id": 1,
