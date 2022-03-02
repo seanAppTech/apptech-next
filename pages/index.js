@@ -8,10 +8,12 @@ import HeroImageLg from '../components/UI/HeroImages/HeroImageLg';
 import Partners from '../components/PageComponents/Home/Partners';
 import ContentGrid from '../components/UI/Grid/ContentGrid';
 import ProductsServicesIntro from '../components/PageComponents/Home/ProductsServicesIntro';
+import ProductsServicesBullets from '../components/PageComponents/ProductsServicesBullets';
+import Testimonial from '../components/PageComponents/Home/Testimonial';
 
 
 export default function Home({ data }) {
-  const { hero, partners, features, productsAndServices } = data;
+  const { hero, partners, features, productsAndServices, testimonial } = data;
   const [heroImage, setHeroImage] = useState(hero.imageLg);
 
   //Check window resize to dynamically render the correct version
@@ -109,6 +111,28 @@ export default function Home({ data }) {
             
           </ContentGrid>
         </section>
+        {
+          productsAndServices.map(product => (
+            <section id={product.id} className='innerContent productsContent'>
+              <h2 className='sectionHeader'>{product.name}</h2>
+              <p className='productDescription'>{product.description}</p>
+              <ProductsServicesBullets productFeatures={product.features} />
+              <div className='productImgWrapper'>
+                <Image 
+                  src={product.image}
+                  layout='fill'
+                  objectFit='contain'
+                />
+              </div>
+              <Link href={`/${product.id}`}><a className='btn btnDark btnLarge productButton'>Learn More</a></Link>
+            </section>
+          ))
+        }
+
+        <section id="testimonial" className='innerContent'>
+        <h2 className='sectionHeader'>Testimonial</h2>
+        <Testimonial testimonial={testimonial} />
+        </section>
       </Main>
     </div>
   )
@@ -176,4 +200,30 @@ const Main = styled.main`
       margin-bottom: 40px;
     }
   }
+
+  .productDescription {
+    max-width: ${props => props.theme.breakpoint.laptop};
+    margin: auto;
+    text-align: center;
+    margin-bottom: 25px;
+    color: ${props => props.theme.colors.grey};
+  }
+
+  .productImgWrapper {
+    width: 100%;
+    max-width: ${props => props.theme.breakpoint.laptop};
+    min-height: 300px;
+    max-height: 700px;
+    margin: auto;
+    position: relative;
+  }
+
+  .productButton {
+    margin: 50px auto 100px;
+  }
+
+  #testimonial {
+    margin-bottom: 100px;
+  }
+
 `;

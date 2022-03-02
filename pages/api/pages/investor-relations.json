@@ -1,0 +1,118 @@
+{
+    "slug": "investor-relations",
+    "name": "Investor Relations",
+    "image": "https://apptechcorp.com/wp-content/uploads/2021/12/IRHero.jpg",
+    "contact": {
+        "subheader": "For all investor relations inquiries, please contact us today!",
+        "phone": "(760) 707-5955",
+        "phoneLink": "tel:+17607075955",
+        "email": "ir@apptechcorp.com",
+        "emailLink": "mailto:ir@apptechcorp.com"
+    },
+    "transferAgent": {
+        "image": "https://apptechcorp.com/wp-content/uploads/2021/12/TransferAgent.png",
+        "name": "Transfer Online, Inc.",
+        "address": "512 SE Salmon St, Portland, OR 97214",
+        "contact": {
+            "phone": "(503) 227-2950",
+            "phoneLink": "tel:+15032272950",
+            "email": "info@transferonline.com",
+            "emailLink": "mailto:info@transferonline.com",
+            "website": "http://www.transferonline.com/"
+        }
+    },
+    "serviceProviders": {
+        "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ServiceProvider.png",
+        "providers": [
+            {
+                "id": 1,
+                "type": "AUDITOR/ACCOUNTANT",
+                "name": "DBB McKennon LLC",
+                "website": "www.dbbmckennon.com"
+            },
+            {
+                "id": 2,
+                "type": "LEGAL COUNSEL",
+                "name": "Nelson Mullins Riley & Scarborough LLP",
+                "website": "www.nelsonmullins.com"
+            },
+            {
+                "id": 3,
+                "type": "TRANSFER AGENT",
+                "name": "Transfer Online, Inc.",
+                "website": "www.transferonline.com"
+            },
+            {
+                "id": 4,
+                "type": "INVESTMENT BANK",
+                "name": "EF Hutton, LLC",
+                "website": "www.efhuttongroup.com"
+            }
+        ]
+    },
+    "disclaimer": {
+        "main": "Please be advised AppTech Payments Corp. is currently a reporting company registered with the Securities and Exchange Commission (SEC). Rule 144 of the SEC provides the guidelines for public reselling of restricted or controlled securities of SEC registered companies in the market. Rule 144 also describes the conditions and process for removal of restrictive legends on stock certificates. AppTech Payments Corp. shareholders who hold securities that are stamped with a restrictive legend will not be able to remove the legend with issuer consent until the company is deemed Rule 144 eligible by the SEC and qualified securities counsel.",
+        "link": "https://www.sec.gov/reportspubs/investor-publications/investorpubsrule144htm.html"
+    },
+    "boardOfDirectors": [
+        {
+            "id": 1,
+            "name": "Roz Huang",
+            "title": "Independent Director",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/RozHaung.png",
+            "linkedIn": "https://www.linkedin.com/in/rozhuang/"
+        },
+        {
+            "id": 2,
+            "name": "William Huff",
+            "title": "Independent Director",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/WilliamHuff.png",
+            "linkedIn": "https://www.linkedin.com/in/william-huff-1739143/"
+        },
+        {
+            "id": 3,
+            "name": "Michael O’Neal",
+            "title": "Independent Director",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/MichaelONeal-1.png",
+            "linkedIn": "https://www.linkedin.com/in/michael-o-neal/"
+        },
+        {
+            "id": 4,
+            "name": "Christopher Williams",
+            "title": "Board Member",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ChristopherWilliams.png",
+            "linkedIn": "https://www.linkedin.com/in/christopher-williams-07a97b22/"
+        },
+        {
+            "id": 5,
+            "name": "Michael Yadgar",
+            "title": "Board Member",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/Michael_Yadgar.png",
+            "linkedIn": "https://www.linkedin.com/in/michaelyadgar/"
+        },
+        {
+            "id": 6,
+            "name": "Andrew Sims",
+            "title": "Board Observer",
+            "image": "https://apptechcorp.com/wp-content/uploads/2021/12/AndrewSims-1.png",
+            "linkedIn": "https://www.linkedin.com/in/andrew-sims-52830326/"
+        }
+    ],
+   "corporateDocs": [
+       {
+           "id": "proxy-statement",
+           "name": "Proxy Statement",
+           "link": "https://apptechcorp.com/wp-content/uploads/2022/01/AppTech_DEF-14A_As-Filed.pdf"
+       },
+       {
+           "id": "filingsSEC",
+           "name": "SEC Filings",
+           "link": "https://sec.report/Ticker/APCX"
+        },
+        {
+            "id": "annualReport",
+            "name": "2020 Annual Report",
+            "link": "https://cecpoc-apptechco.cec.ocp.oraclecloud.com/documents/link/LDEA360EBFD300CA101E16D49797A4C47335DF7C0638/fileview/D58DD8E6D92DDBA0F9C98A537DC672C6C9174B48CC59/_2020_Annual_Report.pdf"
+        }
+   ]
+}
