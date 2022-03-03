@@ -6,7 +6,7 @@ export default function GetStarted({ children }) {
   return (
       <Div>
           <h4>{children}</h4>
-          <div className='wrapper'>
+          <div className='getStartedButtons'>
             <LinkButton large={true} dark={true} text="Request Demo" />
             <LinkButton large={true} dark={false} text="Connect to Sales" />
           </div>
@@ -26,16 +26,6 @@ const Div = styled.div`
 
     h4 {
         color: #fff;
-    }
-
-    .wrapper {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin: 25px 0 0;
-
-        @media screen and (max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-            flex-direction: column;
-        }
+        text-align: center;
     }
 `;

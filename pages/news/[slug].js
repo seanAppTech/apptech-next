@@ -54,7 +54,7 @@ export default function Post({ post, previousPost, nextPost, notFound }) {
     }
 
   return (
-    <div>
+    <>
       <Head>
         <title>AppTech Payments Corp. | News</title>
         <meta name="description" content="The latest news on AppTech Payments Corp." />
@@ -72,7 +72,7 @@ export default function Post({ post, previousPost, nextPost, notFound }) {
           </span>
         </div>
       </Main>
-    </div>
+    </>
   )
 }
 

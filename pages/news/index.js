@@ -46,7 +46,7 @@ export default function News({ posts }) {
   }
 
   return (
-    <div>
+    <>
       <Head>
         <title>AppTech Payments Corp. | News</title>
         <meta name="description" content="The latest news on AppTech Payments Corp." />
@@ -64,7 +64,7 @@ export default function News({ posts }) {
           </span>
         </div>
       </Main>
-    </div>
+    </>
   )
 }
 

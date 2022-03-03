@@ -44,12 +44,12 @@ export default function Navigation() {
                 </button>
                 <div className={productsDrop ? "dropdownMenu productsDrop active" : "dropdownMenu productsDrop"} aria-labelledby="productsDropdown">
                     <Link  
-                        href="/products-and-services/omni-channel-payments"
+                        href="/omni-channel-payments"
                         className="dropLinks"
                         >Omni-Channel Payments
                     </Link>
                     <Link  
-                        href="/products-and-services/digital-banking"
+                        href="/digital-banking"
                         className="dropLinks"
                         >Digital Banking</Link>
                 </div>

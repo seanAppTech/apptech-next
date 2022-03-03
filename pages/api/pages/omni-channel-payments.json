@@ -3,8 +3,8 @@
     "name": "Omni-Channel Payments",
     "image": "https://apptechcorp.com/wp-content/uploads/2021/12/LifestyleHero02-e1640132170584.jpg",
     "description": "Equip your business with physical credit and debit card processing, e-commerce, mobile and new forms of contactless payments.",
-    "featuresHeader": "Payment Experiences Across All Channels",
-    "features": [
+    "bulletsHeader": "Payment Experiences Across All Channels",
+    "bullets": [
         {
             "id": 1,
             "name": "Text-to-Pay",
@@ -46,20 +46,23 @@
             "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/DigitalMerchantOnboarding.png"
         }
     ],
-    "descriptions": [
+    "features": [
         {
+            "id": 1,
             "header": "In-store, mobile and contactless payments",
             "subheader": "Accept Visa, MasterCard and other payments in all of your channels",
             "description": "Jumpstart (or transform) your business with credit, debit and alternative payment processing with competitive processing rates and accessibility through popular payment devices. Devices are available for rent, lease and in most cases BYODs are accepted.",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ContactlessPayVisual.png"
         },
         {
+            "id": 2,
             "header": "E-commerce. Innovated.",
             "subheader": "Immersive online payment and shopping experiences to rival Big Retail.",
             "description": "Our modular, hosted, embedded and API-powered e-commerce payment capabilities will give any business or SaaS provider the ability to deliver memorable and high conversion customer experiences. Break-free with limited to no dependencies on inadequate and complex legacy e-commerce carts and checkouts.",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/ECommerceVisual.png"
         },
         {
+            "id": 3,
             "header": "Text-to-Pay. Re-Imagined.",
             "subheader": "SMS payments and invoicing capabilities to drive channel sales.",
             "description": "Leverage our immersive patented Text-to-Pay capabilities with one of the most popular methods of communication in the world. Businesses and SaaS providers have access to pre-built and API-driven features to easily create and send invoices via text and to enable customers to pay with the tap of their finger!",

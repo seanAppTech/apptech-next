@@ -49,7 +49,7 @@ export default function Company({ data, posts }) {
   }
 
   return (
-    <div>
+    <>
       <Head>
         <title>AppTech Payments Corp. | Company</title>
         <meta name="description" content="Innovative payment technology and digital banking solutions." />
@@ -151,7 +151,7 @@ export default function Company({ data, posts }) {
           <Press items={press} />
         </section>
       </Main>
-    </div>
+    </>
   )
 }
 
@@ -188,9 +188,6 @@ const Main = styled.main`
 
     h1 {
       margin-bottom: 20px;
-      @media (max-width: ${props => props.theme.breakpoint.tablet}) {
-        font-size: 35px;
-      }
     }
 
     p {

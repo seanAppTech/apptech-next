@@ -52,6 +52,9 @@ export const GlobalStyles = createGlobalStyle`
   h1 {
     font-size: 50px;
     line-height: 1.2;
+    @media (max-width: ${props => props.theme.breakpoint.tablet}) {
+      font-size: 35px;
+    }
   }
   h2 {
     font-size: 40px;
@@ -165,4 +168,15 @@ export const GlobalStyles = createGlobalStyle`
     margin: 100px auto;
   }
   
+  .getStartedButtons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0 0;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 `;

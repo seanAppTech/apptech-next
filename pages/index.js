@@ -73,7 +73,7 @@ export default function Home({ data }) {
   const productsIntro = productsAndServices.map(product => (<ProductsServicesIntro product={product} key={product.id} />));
 
   return (
-    <div>
+    <>
       <Head>
         <title>AppTech Payments Corp. | Home</title>
         <meta name="description" content="Innovative payment technology and digital banking solutions." />
@@ -113,7 +113,7 @@ export default function Home({ data }) {
         </section>
         {
           productsAndServices.map(product => (
-            <section id={product.id} className='innerContent productsContent'>
+            <section id={product.id} key={product.id} className='innerContent productsContent'>
               <h2 className='sectionHeader'>{product.name}</h2>
               <p className='productDescription'>{product.description}</p>
               <ProductsServicesBullets productFeatures={product.features} />
@@ -130,11 +130,11 @@ export default function Home({ data }) {
         }
 
         <section id="testimonial" className='innerContent'>
-        <h2 className='sectionHeader'>Testimonial</h2>
-        <Testimonial testimonial={testimonial} />
+          <h2 className='sectionHeader'>Testimonial</h2>
+          <Testimonial testimonial={testimonial} />
         </section>
       </Main>
-    </div>
+    </>
   )
 }
 
@@ -189,18 +189,6 @@ const Main = styled.main`
     margin-top: 0;
   }
 
-  .featureContent {
-    h3 {
-      margin-bottom: 40px;
-    }
-
-    p {
-      color: ${props => props.theme.colors.grey};
-      font-weight: 300;
-      margin-bottom: 40px;
-    }
-  }
-
   .productDescription {
     max-width: ${props => props.theme.breakpoint.laptop};
     margin: auto;
@@ -224,6 +212,18 @@ const Main = styled.main`
 
   #testimonial {
     margin-bottom: 100px;
+  }
+
+  .featureContent {
+    h3 {
+      margin-bottom: 40px;
+    }
+
+    p {
+      color: ${props => props.theme.colors.grey};
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
   }
 
 `;

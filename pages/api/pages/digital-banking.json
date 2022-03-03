@@ -3,8 +3,8 @@
     "name": "Digital Banking",
     "image": "https://apptechcorp.com/wp-content/uploads/2021/12/LifestyleHero_01.jpg",
     "description": "Transcend transactions with scalable, modularized banking and financial services right sized for your SaaS or business.",
-    "featuresHeader": "Boundless Financial Experiences",
-    "features": [
+    "bulletsHeader": "Boundless Financial Experiences",
+    "bullets": [
         {
             "id": 1,
             "name": "Banking-as-a-Service",
@@ -36,20 +36,23 @@
             "icon": "https://apptechcorp.com/wp-content/uploads/2021/12/AMLFraud.png"
         }
     ],
-    "descriptions": [
+    "features": [
         {
+            "id": 1,
             "header": "BaaS Unleashed!",
             "subheader": "Stackable digital finance capabilities. One Location.",
             "description": "At the heart of your business is a need to offer your customers maximum flexibility with features that enable value and data transfers that are both endless yet specific to your customer's pain-points. With AppTech's Banking-as-a-Service all of these capabilities are ready to level up your business or SaaS offering.",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/IsometricDashboard.png"
         },
         {
+            "id": 2,
             "header": "Secure and Borderless Virtual Card Experiences.",
             "subheader": "Enable virtual value transfer and payments anywhere.",
             "description": "Get access to our API-driven, tokenized card processing features to integrate your payments with MasterCard and Visa. Configure and deploy your solution in minutes, not hours! Use our multi-currency system to take advantage of features such as dynamic handling and just-in-time funding.",
             "image": "https://apptechcorp.com/wp-content/uploads/2021/12/CreditCardVisual_12_23_21.png"
         },
         {
+            "id": 3,
             "header": "Automated and Autonomous Finance. Made Simple.",
             "subheader": "Round up, next generation subscriptions and BlockFI",
             "description": "Use advanced features of our BaaS solution to automate and optimize funding and balance management. Build value-added product offerings by creating scheduled or transaction 'round up' savings plans, dynamically handle multi-currency account linked to a single card or provision additional cards for secure, online spending or for managing subscriptions.",
